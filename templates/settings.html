@@ -54,6 +54,8 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <script src="../js/db.js"></script>
+  <script src="../js/app.js"></script>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col antialiased">
 <!-- Top Navigation Bar -->
@@ -152,22 +154,22 @@
                 Dữ liệu
             </h2>
 <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm border border-gray-200/50 dark:border-gray-800">
-<!-- Item: Nhập từ Excel -->
-<button class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark active:bg-gray-100 dark:active:bg-gray-800 transition-colors group border-b border-gray-100 dark:border-gray-700 last:border-0">
-<div class="flex items-center gap-3">
-<div class="flex items-center justify-center size-8 rounded-lg bg-green-600 text-white shrink-0 shadow-sm">
-<span class="material-symbols-outlined" style="font-size: 20px;">upload_file</span>
-</div>
-<div class="flex flex-col items-start">
-<span class="text-[17px] font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-primary transition-colors">
-                                Nhập từ Excel
-                            </span>
-</div>
-</div>
-<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">chevron_right</span>
-</button>
+        <!-- Item: Nhập từ Excel -->
+        <button class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark active:bg-gray-100 dark:active:bg-gray-800 transition-colors group border-b border-gray-100 dark:border-gray-700 last:border-0" onclick="document.getElementById('import-file').click()">
+            <div class="flex items-center gap-3">
+                <div class="flex items-center justify-center size-8 rounded-lg bg-green-600 text-white shrink-0 shadow-sm">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">upload_file</span>
+                </div>
+                <div class="flex flex-col items-start">
+                    <span class="text-[17px] font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-primary transition-colors">
+                            Nhập từ Excel
+                        </span>
+                </div>
+            </div>
+            <span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">chevron_right</span>
+        </button>
 <!-- Item: Xuất ra Excel -->
-<button class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark active:bg-gray-100 dark:active:bg-gray-800 transition-colors group border-b border-gray-100 dark:border-gray-700 last:border-0">
+<button class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark active:bg-gray-100 dark:active:bg-gray-800 transition-colors group border-b border-gray-100 dark:border-gray-700 last:border-0" onclick="exportToExcel()">
 <div class="flex items-center gap-3">
 <div class="flex items-center justify-center size-8 rounded-lg bg-green-600 text-white shrink-0 shadow-sm">
 <span class="material-symbols-outlined" style="font-size: 20px;">download</span>
@@ -214,4 +216,6 @@
 </div>
 <!-- Spacer for fixed bottom nav -->
 <div class="h-20 md:hidden"></div>
+<input type="file" id="import-file" accept=".xlsx,.xls" style="display:none" onchange="handleExcelImport(event)">
+<script src="../js/excel.js"></script>
 </body></html>

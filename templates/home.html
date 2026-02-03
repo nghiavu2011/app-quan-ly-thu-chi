@@ -34,6 +34,8 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <script src="../js/db.js"></script>
+  <script src="../js/app.js"></script>
   </head>
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden antialiased">
 <div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl overflow-hidden">
@@ -74,11 +76,11 @@
 </div>
 <span class="material-symbols-outlined text-white/80">arrow_forward</span>
 </div>
-<div class="relative z-10 mt-4">
-<p class="text-blue-100 font-medium text-sm mb-1">Thu Chi Gia Đình</p>
-<h4 class="text-white text-2xl font-bold">15.000.000đ</h4>
-<p class="text-blue-200 text-xs mt-1">Tổng dư tháng này</p>
-</div>
+  <div class="relative z-10 mt-4">
+    <p class="text-blue-100 font-medium text-sm mb-1">Thu Chi Gia Đình</p>
+    <h4 class="text-white text-2xl font-bold" id="total-balance">15.000.000đ</h4>
+    <p class="text-blue-200 text-xs mt-1">Tổng dư tháng này</p>
+  </div>
 </div>
 <!-- Rental Management Card -->
 <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-5 shadow-md dark:shadow-none min-h-[160px] cursor-pointer hover:border-primary/50 transition-all" onclick="location.href='rental-units.html'">
@@ -88,16 +90,16 @@
 </div>
 <span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold px-2 py-1 rounded-full">Đang hoạt động</span>
 </div>
-<div class="mt-4">
-<p class="text-gray-500 dark:text-gray-400 font-medium text-sm mb-1">Hoạch Toán Nhà Cho Thuê</p>
-<div class="flex items-end gap-2">
-<h4 class="text-[#111418] dark:text-white text-2xl font-bold">8/10</h4>
-<span class="text-gray-400 text-sm font-medium mb-1">phòng đã thuê</span>
-</div>
-<div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-2 mt-3">
-<div class="bg-orange-500 h-2 rounded-full" style="width: 80%"></div>
-</div>
-</div>
+  <div class="mt-4" id="room-stats">
+    <p class="text-gray-500 dark:text-gray-400 font-medium text-sm mb-1">Hoạch Toán Nhà Cho Thuê</p>
+    <div class="flex items-end gap-2">
+      <h4 class="text-[#111418] dark:text-white text-2xl font-bold">8/10</h4>
+      <span class="text-gray-400 text-sm font-medium mb-1">phòng đã thuê</span>
+    </div>
+    <div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-2 mt-3">
+      <div class="bg-orange-500 h-2 rounded-full" style="width: 80%"></div>
+    </div>
+  </div>
 </div>
 </div>
 </section>
@@ -124,7 +126,7 @@
 <div class="flex justify-between items-center mb-4">
 <h3 class="text-lg font-bold text-[#111418] dark:text-white">Giao dịch gần đây</h3>
 </div>
-<div class="flex flex-col gap-3">
+  <div class="flex flex-col gap-3" id="recent-transactions">
 <!-- Item 1 -->
 <div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm" onclick="location.href='transactions-list.html'">
 <div class="flex items-center gap-3">

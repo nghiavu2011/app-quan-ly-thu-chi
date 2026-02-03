@@ -47,6 +47,8 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <script src="../js/db.js"></script>
+  <script src="../js/app.js"></script>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white">
 <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
@@ -71,28 +73,28 @@
 <!-- Stats Section -->
 <section class="p-4">
 <div class="flex flex-wrap gap-4">
-<!-- Total Revenue Card -->
-<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-5 bg-surface-light dark:bg-surface-dark border border-[#dbe0e6] dark:border-gray-700 shadow-sm">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-xl">account_balance_wallet</span>
-<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Tổng cần thu</p>
-</div>
-<p class="text-[#111418] dark:text-white tracking-tight text-xl font-bold leading-tight">20.000.000 đ</p>
-</div>
-<!-- Remaining/Unpaid Card -->
-<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-5 bg-surface-light dark:bg-surface-dark border border-[#dbe0e6] dark:border-gray-700 shadow-sm relative overflow-hidden">
-<div class="absolute right-0 top-0 h-full w-1 bg-warning"></div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-warning text-xl">pending_actions</span>
-<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Còn lại</p>
-</div>
-<p class="text-warning tracking-tight text-xl font-bold leading-tight">8.500.000 đ</p>
-</div>
+        <!-- Total Revenue Card -->
+        <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-5 bg-surface-light dark:bg-surface-dark border border-[#dbe0e6] dark:border-gray-700 shadow-sm" id="total-receivable">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-xl">account_balance_wallet</span>
+                <p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Tổng cần thu</p>
+            </div>
+            <p class="text-[#111418] dark:text-white tracking-tight text-xl font-bold leading-tight">20.000.000 đ</p>
+        </div>
+        <!-- Remaining/Unpaid Card -->
+        <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-5 bg-surface-light dark:bg-surface-dark border border-[#dbe0e6] dark:border-gray-700 shadow-sm relative overflow-hidden" id="remaining-receivable">
+            <div class="absolute right-0 top-0 h-full w-1 bg-warning"></div>
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-warning text-xl">pending_actions</span>
+                <p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Còn lại</p>
+            </div>
+            <p class="text-warning tracking-tight text-xl font-bold leading-tight">8.500.000 đ</p>
+        </div>
 </div>
 </section>
-<!-- Receivables List -->
-<section class="flex flex-col gap-4 px-4 pb-4">
-<h2 class="text-lg font-bold text-[#111418] dark:text-white px-1">Danh sách phòng</h2>
+    <!-- Receivables List -->
+    <section class="flex flex-col gap-4 px-4 pb-4" id="receivables-list">
+        <h2 class="text-lg font-bold text-[#111418] dark:text-white px-1">Danh sách phòng</h2>
 <!-- Unpaid Item 1 -->
 <div class="group relative flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-200 dark:border-gray-700">
 <div class="flex items-start justify-between gap-3">

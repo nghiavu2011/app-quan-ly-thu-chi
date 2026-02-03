@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Voice Input - Nhập giọng nói</title>
   <link rel="stylesheet" href="../design-system.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script src="../js/db.js"></script>
+  <script src="../js/voice.js"></script>
 </head>
-<body>
+<body class="bg-gray-50 dark:bg-gray-900 font-['Lexend']">
   <!-- Voice Input Modal -->
   <div class="voice-modal">
     <!-- Header -->
@@ -27,9 +32,11 @@
       </div>
 
       <!-- Mic Button -->
-      <button class="voice-mic-btn recording">
+      <button class="voice-mic-btn recording" onclick="startVoiceInput()" id="mic-btn">
         🎤
       </button>
+      <p id="voice-status" style="margin-top: var(--space-4); color: var(--color-text-secondary); text-align: center; font-size: var(--text-sm);">Nhấn để nói</p>
+      <p id="voice-text" style="margin-top: var(--space-2); color: var(--color-text); text-align: center; font-weight: var(--font-semibold); min-height: 24px;"></p>
 
       <!-- Hint Text -->
       <p style="margin-top: var(--space-6); color: var(--color-text-secondary); text-align: center;">

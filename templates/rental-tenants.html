@@ -43,6 +43,8 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <script src="../js/db.js"></script>
+  <script src="../js/app.js"></script>
   </head>
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display">
 <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
@@ -79,8 +81,8 @@
 </div>
 <!-- Spacer -->
 <div class="h-2"></div>
-<!-- Tenant List -->
-<div class="flex flex-col gap-3 px-4">
+    <!-- Tenant List -->
+    <div class="flex flex-col gap-3 px-4" id="tenants-list">
 <!-- Active Tenant Card -->
 <div class="group relative flex flex-col gap-3 rounded-xl bg-white dark:bg-[#1a2634] p-4 shadow-sm transition-all active:scale-[0.99]">
 <div class="flex items-start justify-between">

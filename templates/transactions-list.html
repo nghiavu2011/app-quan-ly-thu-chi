@@ -46,6 +46,8 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <script src="../js/db.js"></script>
+  <script src="../js/app.js"></script>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased overflow-x-hidden min-h-screen relative pb-20">
 <!-- Top App Bar -->
@@ -87,8 +89,8 @@
 </button>
 </div>
 </div>
-<!-- Main Content List -->
-<div class="flex flex-col pb-4">
+    <!-- Main Content List -->
+    <div class="flex flex-col pb-4" id="transactions-list">
 <!-- Group: Hôm nay -->
 <div class="sticky top-[168px] z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 py-3 border-b border-gray-100 dark:border-gray-800">
 <div class="flex justify-between items-end">

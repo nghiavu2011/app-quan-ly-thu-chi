@@ -52,6 +52,8 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <script src="../js/db.js"></script>
+  <script src="../js/app.js"></script>
   </head>
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white flex flex-col min-h-screen">
 <!-- Top App Bar -->
@@ -83,8 +85,8 @@
             </button>
 </div>
 </header>
-<!-- Main Content List -->
-<main class="flex-1 px-4 py-4 pb-24 flex flex-col gap-4">
+    <!-- Main Content List -->
+    <main class="flex-1 px-4 py-4 pb-24 flex flex-col gap-4" id="rooms-list">
 <!-- Card 1: Occupied -->
 <article class="flex flex-col bg-white dark:bg-[#1a2634] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700">
 <div class="p-4">
