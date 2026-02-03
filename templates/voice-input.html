@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Voice Input - Nhập giọng nói</title>
+  <link rel="stylesheet" href="../design-system.css">
+</head>
+<body>
+  <!-- Voice Input Modal -->
+  <div class="voice-modal">
+    <!-- Header -->
+    <div class="voice-modal-header">
+      <h3 style="font-weight: var(--font-semibold);">🎤 Nhập giọng nói</h3>
+      <button class="modal-close">✕</button>
+    </div>
+
+    <!-- Content -->
+    <div class="voice-modal-content">
+      <!-- Wave Animation -->
+      <div class="voice-wave">
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+        <div class="voice-wave-bar"></div>
+      </div>
+
+      <!-- Mic Button -->
+      <button class="voice-mic-btn recording">
+        🎤
+      </button>
+
+      <!-- Hint Text -->
+      <p style="margin-top: var(--space-6); color: var(--color-text-secondary); text-align: center;">
+        Đang nghe...<br>
+        <span style="font-size: var(--text-sm);">Nói "Chi 50 nghìn tiền cafe"</span>
+      </p>
+
+      <!-- Preview Result (shown after recording) -->
+      <div class="voice-preview" style="margin-top: var(--space-4);">
+        <div class="voice-preview-field">
+          <span class="voice-preview-label">Loại:</span>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <span class="voice-preview-value" style="color: var(--color-danger); font-weight: var(--font-bold);">CHI</span>
+            <button style="background: none; border: none; color: var(--color-primary); cursor: pointer;">✎</button>
+          </div>
+        </div>
+        <div class="voice-preview-field">
+          <span class="voice-preview-label">Số tiền:</span>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <span class="voice-preview-value text-amount">50,000 ₫</span>
+            <button style="background: none; border: none; color: var(--color-primary); cursor: pointer;">✎</button>
+          </div>
+        </div>
+        <div class="voice-preview-field">
+          <span class="voice-preview-label">Danh mục:</span>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <span class="voice-preview-value">☕ Cafe</span>
+            <button style="background: none; border: none; color: var(--color-primary); cursor: pointer;">✎</button>
+          </div>
+        </div>
+        <div class="voice-preview-field">
+          <span class="voice-preview-label">Tài khoản:</span>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <span class="voice-preview-value">📱 Momo</span>
+            <button style="background: none; border: none; color: var(--color-primary); cursor: pointer;">✎</button>
+          </div>
+        </div>
+        <div class="voice-preview-field" style="border-bottom: none;">
+          <span class="voice-preview-label">Ghi chú:</span>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <span class="voice-preview-value">tiền cafe</span>
+            <button style="background: none; border: none; color: var(--color-primary); cursor: pointer;">✎</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display: flex; gap: var(--space-3); margin-top: var(--space-6); width: 100%; max-width: 400px; padding: 0 var(--space-4);">
+        <button class="btn btn-secondary" style="flex: 1;">
+          <span>✕</span>
+          <span>Hủy</span>
+        </button>
+        <button class="btn btn-secondary" style="flex: 1;">
+          <span>🎤</span>
+          <span>Nói lại</span>
+        </button>
+        <button class="btn btn-primary" style="flex: 1;">
+          <span>✓</span>
+          <span>Xác nhận</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

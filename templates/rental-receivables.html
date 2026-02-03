@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Công nợ - Thuê Nhà</title>
+  <link rel="stylesheet" href="../design-system.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <div class="topbar">
+      <div class="topbar-back">
+        <span>←</span>
+        <span>Công nợ</span>
+      </div>
+      <div class="topbar-actions">
+        <div class="period-selector">
+          <span class="period-selector-icon">📅</span>
+          <span class="period-selector-value">T1/2026 ▼</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="app-content">
+      <!-- Total Summary -->
+      <div class="card" style="margin-bottom: var(--space-4); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white;">
+        <div class="kpi-card-label" style="color: rgba(255,255,255,0.8);">Tổng chờ thu</div>
+        <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); margin-top: var(--space-2);">
+          10,500,000 ₫
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="toggle-group" style="margin-bottom: var(--space-4);">
+        <button class="toggle-btn active">
+          Chờ thu <span class="badge" style="background: var(--color-warning); color: white; margin-left: var(--space-2);">5</span>
+        </button>
+        <button class="toggle-btn">
+          Quá hạn <span class="badge" style="background: var(--color-danger); color: white; margin-left: var(--space-2);">2</span>
+        </button>
+        <button class="toggle-btn">
+          Đã thu <span class="badge" style="background: var(--color-success); color: white; margin-left: var(--space-2);">8</span>
+        </button>
+      </div>
+
+      <!-- Chờ thu Section -->
+      <div class="divider-text" style="margin-bottom: var(--space-3);">
+        <span>═══ Chờ thu ═══</span>
+      </div>
+
+      <!-- Receivable Card: Pending -->
+      <div class="receivable-card">
+        <div class="receivable-header">
+          <div>
+            <span class="badge badge-warning" style="margin-bottom: var(--space-1); display: inline-flex;">
+              <span class="badge-dot"></span>
+              <span>Chờ thu</span>
+            </span>
+            <div class="receivable-title">P101 - Tiền thuê T1</div>
+          </div>
+          <div class="receivable-amount">3,500,000 ₫</div>
+        </div>
+        <div class="receivable-tenant">Nguyễn Văn A</div>
+        <div class="receivable-due">
+          <span>⏰</span>
+          <span>Hạn: 05/01</span>
+        </div>
+        <div class="receivable-actions">
+          <button class="btn btn-ghost btn-sm" style="flex: 1;">
+            <span>📞</span>
+            <span>Gọi</span>
+          </button>
+          <button class="btn btn-primary btn-sm" style="flex: 1;">
+            <span>✓</span>
+            <span>Đã thu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Receivable Card: Pending (2) -->
+      <div class="receivable-card" style="margin-top: var(--space-3);">
+        <div class="receivable-header">
+          <div>
+            <span class="badge badge-warning" style="margin-bottom: var(--space-1); display: inline-flex;">
+              <span class="badge-dot"></span>
+              <span>Chờ thu</span>
+            </span>
+            <div class="receivable-title">P102 - Tiền thuê T1</div>
+          </div>
+          <div class="receivable-amount">3,200,000 ₫</div>
+        </div>
+        <div class="receivable-tenant">Trần Thị C</div>
+        <div class="receivable-due">
+          <span>⏰</span>
+          <span>Hạn: 10/01</span>
+        </div>
+        <div class="receivable-actions">
+          <button class="btn btn-ghost btn-sm" style="flex: 1;">
+            <span>📞</span>
+            <span>Gọi</span>
+          </button>
+          <button class="btn btn-primary btn-sm" style="flex: 1;">
+            <span>✓</span>
+            <span>Đã thu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quá hạn Section -->
+      <div class="divider-text" style="margin: var(--space-4) 0 var(--space-3);">
+        <span>═══ Quá hạn ═══</span>
+      </div>
+
+      <!-- Receivable Card: Overdue -->
+      <div class="receivable-card overdue">
+        <div class="receivable-header">
+          <div>
+            <span class="badge badge-danger" style="margin-bottom: var(--space-1); display: inline-flex;">
+              <span class="badge-dot"></span>
+              <span>Quá hạn</span>
+            </span>
+            <div class="receivable-title">P203 - Điện T12</div>
+          </div>
+          <div class="receivable-amount">450,000 ₫</div>
+        </div>
+        <div class="receivable-tenant">Trần Thị B</div>
+        <div class="receivable-due overdue">
+          <span>🔴</span>
+          <span>Quá 5 ngày</span>
+        </div>
+        <div class="receivable-actions">
+          <button class="btn btn-ghost btn-sm" style="flex: 1;">
+            <span>📞</span>
+            <span>Gọi</span>
+          </button>
+          <button class="btn btn-primary btn-sm" style="flex: 1;">
+            <span>✓</span>
+            <span>Đã thu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Receivable Card: Overdue (2) -->
+      <div class="receivable-card overdue" style="margin-top: var(--space-3);">
+        <div class="receivable-header">
+          <div>
+            <span class="badge badge-danger" style="margin-bottom: var(--space-1); display: inline-flex;">
+              <span class="badge-dot"></span>
+              <span>Quá hạn</span>
+            </span>
+            <div class="receivable-title">P105 - Tiền thuê T1</div>
+          </div>
+          <div class="receivable-amount">3,000,000 ₫</div>
+        </div>
+        <div class="receivable-tenant">Lê Văn D</div>
+        <div class="receivable-due overdue">
+          <span>🔴</span>
+          <span>Quá 3 ngày</span>
+        </div>
+        <div class="receivable-actions">
+          <button class="btn btn-ghost btn-sm" style="flex: 1;">
+            <span>📞</span>
+            <span>Gọi</span>
+          </button>
+          <button class="btn btn-primary btn-sm" style="flex: 1;">
+            <span>✓</span>
+            <span>Đã thu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAB -->
+    <button class="fab" aria-label="Thu tiền">💰</button>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏠</span>
+        <span>Trang chủ</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">💰</span>
+        <span>Thu Chi</span>
+      </a>
+      <a href="#" class="bottom-nav-item active">
+        <span class="bottom-nav-item-icon">🏘️</span>
+        <span>Thuê Nhà</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">⚙️</span>
+        <span>Cài đặt</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

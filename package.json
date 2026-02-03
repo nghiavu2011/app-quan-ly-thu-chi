@@ -1,0 +1,24 @@
+{
+  "name": "kakeibo-pro",
+  "version": "1.0.0",
+  "description": "Ứng dụng Quản Lý Tài Chính Gia Đình & Thuê Nhà",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "preview": "npx serve ."
+  },
+  "keywords": [
+    "finance",
+    "expense-tracker",
+    "rental-management",
+    "vietnam",
+    "mobile-first",
+    "pwa"
+  ],
+  "author": "Kakeibo Pro Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}

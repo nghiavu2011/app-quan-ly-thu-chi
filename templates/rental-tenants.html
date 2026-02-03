@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Người thuê - Thuê Nhà</title>
+  <link rel="stylesheet" href="../design-system.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <div class="topbar">
+      <div class="topbar-back">
+        <span>←</span>
+        <span>Người thuê</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="topbar-btn" style="font-size: var(--text-sm); width: auto; padding: 0 var(--space-3); background: var(--color-primary); color: white; border-radius: var(--radius-md);">
+          <span>+</span>
+          <span style="margin-left: var(--space-1);">Thêm</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="app-content">
+      <!-- Search Field -->
+      <div class="search-field" style="margin-bottom: var(--space-4);">
+        <span class="search-field-icon">🔍</span>
+        <input type="text" placeholder="Tìm theo tên, SĐT...">
+        <span class="search-field-clear" style="display: none;">✕</span>
+      </div>
+
+      <!-- Tenant Card: Active -->
+      <div class="tenant-card">
+        <div class="tenant-card-header">
+          <div class="tenant-avatar">👤</div>
+          <div class="tenant-info">
+            <div class="tenant-name">Nguyễn Văn A</div>
+            <div class="tenant-phone">📱 0912345678</div>
+          </div>
+          <span class="badge badge-success">
+            <span class="badge-dot"></span>
+            <span>Active</span>
+          </span>
+        </div>
+        <div class="tenant-details">
+          <div>🏠 Phòng 101</div>
+          <div>📅 Từ 01/07/2025</div>
+          <div>📄 HĐ còn 5 tháng</div>
+        </div>
+      </div>
+
+      <!-- Tenant Card: Active -->
+      <div class="tenant-card" style="margin-top: var(--space-3);">
+        <div class="tenant-card-header">
+          <div class="tenant-avatar">👤</div>
+          <div class="tenant-info">
+            <div class="tenant-name">Trần Thị B</div>
+            <div class="tenant-phone">📱 0987654321</div>
+          </div>
+          <span class="badge badge-success">
+            <span class="badge-dot"></span>
+            <span>Active</span>
+          </span>
+        </div>
+        <div class="tenant-details">
+          <div>🏠 Phòng 203</div>
+          <div>📅 Từ 15/03/2025</div>
+          <div>📄 HĐ còn 7 tháng</div>
+        </div>
+      </div>
+
+      <!-- Tenant Card: Active -->
+      <div class="tenant-card" style="margin-top: var(--space-3);">
+        <div class="tenant-card-header">
+          <div class="tenant-avatar">👤</div>
+          <div class="tenant-info">
+            <div class="tenant-name">Lê Văn C</div>
+            <div class="tenant-phone">📱 0909123456</div>
+          </div>
+          <span class="badge badge-success">
+            <span class="badge-dot"></span>
+            <span>Active</span>
+          </span>
+        </div>
+        <div class="tenant-details">
+          <div>🏠 Phòng 105</div>
+          <div>📅 Từ 01/01/2025</div>
+          <div>📄 HĐ còn 11 tháng</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAB -->
+    <button class="fab" aria-label="Thêm người thuê">+</button>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏠</span>
+        <span>Trang chủ</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">💰</span>
+        <span>Thu Chi</span>
+      </a>
+      <a href="#" class="bottom-nav-item active">
+        <span class="bottom-nav-item-icon">🏘️</span>
+        <span>Thuê Nhà</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">⚙️</span>
+        <span>Cài đặt</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

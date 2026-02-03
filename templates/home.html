@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kakeibo Pro - Trang chủ</title>
+  <link rel="stylesheet" href="design-system.css">
+  <style>
+    /* Demo styles */
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <div class="topbar">
+      <div class="topbar-back" style="visibility: hidden;">
+        <span>←</span>
+      </div>
+      <div class="topbar-title">Kakeibo Pro</div>
+      <div class="topbar-actions">
+        <button class="topbar-btn" aria-label="Profile">👤</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="app-content">
+      <!-- Thu Chi Module Card -->
+      <div class="module-card" onclick="alert('Navigate to Thu Chi')">
+        <div class="module-card-header">
+          <div class="module-card-title">
+            <span class="module-card-icon">💰</span>
+            <span>Thu Chi Gia Đình</span>
+          </div>
+          <span class="module-card-arrow">→</span>
+        </div>
+        <div class="module-card-stats">
+          <div class="module-card-stat">
+            <span class="module-card-label">Tháng này</span>
+            <span>
+              <span class="module-card-value income">+5.2tr</span>
+              <span class="module-card-value expense" style="margin-left: var(--space-2);">-3.8tr</span>
+            </span>
+          </div>
+          <div class="module-card-stat">
+            <span class="module-card-label">Tiết kiệm</span>
+            <span class="module-card-value income">1.4tr (27%)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thuê Nhà Module Card -->
+      <div class="module-card mt-4" onclick="alert('Navigate to Thuê Nhà')">
+        <div class="module-card-header">
+          <div class="module-card-title">
+            <span class="module-card-icon">🏘️</span>
+            <span>Thuê Nhà</span>
+          </div>
+          <span class="module-card-arrow">→</span>
+        </div>
+        <div class="module-card-stats">
+          <div class="module-card-stat">
+            <span class="module-card-label">Đã thu</span>
+            <span class="module-card-value">12/15 phòng</span>
+          </div>
+          <div class="module-card-stat">
+            <span class="module-card-label">Chờ thu</span>
+            <span class="module-card-value income">10.5tr</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reminders Section -->
+      <div class="mt-4">
+        <h3 style="font-size: var(--text-lg); font-weight: var(--font-semibold); margin-bottom: var(--space-3);">
+          🔔 Nhắc việc (3)
+        </h3>
+        <div class="reminder-list">
+          <div class="reminder-item">
+            <span class="reminder-icon">💰</span>
+            <div class="reminder-content">
+              <div class="reminder-title">Thu tiền P101</div>
+              <div class="reminder-meta">Hôm nay • 3,500,000 ₫</div>
+            </div>
+            <div class="reminder-actions">
+              <button class="reminder-btn primary">Thu</button>
+            </div>
+          </div>
+          
+          <div class="reminder-item urgent">
+            <span class="reminder-icon">📄</span>
+            <div class="reminder-content">
+              <div class="reminder-title">HĐ P203 hết hạn</div>
+              <div class="reminder-meta">Còn 5 ngày • Nguyễn Văn B</div>
+            </div>
+            <div class="reminder-actions">
+              <button class="reminder-btn secondary">Xem</button>
+            </div>
+          </div>
+          
+          <div class="reminder-item">
+            <span class="reminder-icon">⚡</span>
+            <div class="reminder-content">
+              <div class="reminder-title">Thu tiền điện P105</div>
+              <div class="reminder-meta">Ngày mai • ~450,000 ₫</div>
+            </div>
+            <div class="reminder-actions">
+              <button class="reminder-btn secondary">Xem</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAB -->
+    <button class="fab" onclick="alert('Open Quick Add')" aria-label="Thêm nhanh">+</button>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="#" class="bottom-nav-item active">
+        <span class="bottom-nav-item-icon">🏠</span>
+        <span>Trang chủ</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">💰</span>
+        <span>Thu Chi</span>
+      </a>
+      <a href="#" class="bottom-nav-item" style="position: relative;">
+        <span class="bottom-nav-item-icon" style="width: 48px; height: 48px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin-top: -16px; box-shadow: var(--shadow-md);">➕</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏘️</span>
+        <span>Thuê Nhà</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">⚙️</span>
+        <span>Cài đặt</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

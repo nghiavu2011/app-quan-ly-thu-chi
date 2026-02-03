@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Danh sách giao dịch</title>
+  <link rel="stylesheet" href="../design-system.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <div class="topbar">
+      <div class="topbar-back">
+        <span>←</span>
+        <span>Giao dịch</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="topbar-btn" aria-label="Search">🔍</button>
+        <button class="topbar-btn" aria-label="Filter">📥</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="app-content">
+      <!-- Segment Control -->
+      <div class="toggle-group" style="margin-bottom: var(--space-4);">
+        <button class="toggle-btn active">Tất cả</button>
+        <button class="toggle-btn income">Thu</button>
+        <button class="toggle-btn expense">Chi</button>
+      </div>
+
+      <!-- Date Section: Hôm nay -->
+      <div class="divider-text" style="margin-bottom: var(--space-3);">
+        <span>Hôm nay, 03/02/2026</span>
+      </div>
+
+      <div class="transaction-item">
+        <div class="transaction-icon">☕</div>
+        <div class="transaction-content">
+          <div class="transaction-header">
+            <span class="transaction-title">Cafe Highlands</span>
+            <span class="transaction-amount expense">-65,000 ₫</span>
+          </div>
+          <div class="transaction-meta">
+            <span>Momo</span>
+            <span class="transaction-account">10:30</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="transaction-item">
+        <div class="transaction-icon">🍴</div>
+        <div class="transaction-content">
+          <div class="transaction-header">
+            <span class="transaction-title">Ăn trưa</span>
+            <span class="transaction-amount expense">-85,000 ₫</span>
+          </div>
+          <div class="transaction-meta">
+            <span>Cash</span>
+            <span class="transaction-account">12:15</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Date Section: Hôm qua -->
+      <div class="divider-text" style="margin: var(--space-4) 0 var(--space-3);">
+        <span>Hôm qua, 02/02/2026</span>
+      </div>
+
+      <div class="transaction-item">
+        <div class="transaction-icon" style="background: var(--color-success-light);">💼</div>
+        <div class="transaction-content">
+          <div class="transaction-header">
+            <span class="transaction-title">Lương tháng 2</span>
+            <span class="transaction-amount income">+15,000,000 ₫</span>
+          </div>
+          <div class="transaction-meta">
+            <span>Vietcombank</span>
+            <span class="transaction-account">09:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="transaction-item">
+        <div class="transaction-icon">🛒</div>
+        <div class="transaction-content">
+          <div class="transaction-header">
+            <span class="transaction-title">Mua sắm BigC</span>
+            <span class="transaction-amount expense">-450,000 ₫</span>
+          </div>
+          <div class="transaction-meta">
+            <span>Vietcombank</span>
+            <span class="transaction-account">18:30</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="transaction-item">
+        <div class="transaction-icon">🚗</div>
+        <div class="transaction-content">
+          <div class="transaction-header">
+            <span class="transaction-title">Đổ xăng</span>
+            <span class="transaction-amount expense">-200,000 ₫</span>
+          </div>
+          <div class="transaction-meta">
+            <span>ZaloPay</span>
+            <span class="transaction-account">19:00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load more indicator -->
+      <div style="text-align: center; padding: var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm);">
+        <div class="spinner" style="margin: 0 auto var(--space-3); width: 20px; height: 20px; border-width: 2px;"></div>
+        Đang tải thêm...
+      </div>
+    </div>
+
+    <!-- FAB -->
+    <button class="fab" aria-label="Thêm giao dịch">+</button>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏠</span>
+        <span>Trang chủ</span>
+      </a>
+      <a href="#" class="bottom-nav-item active">
+        <span class="bottom-nav-item-icon">💰</span>
+        <span>Thu Chi</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏘️</span>
+        <span>Thuê Nhà</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">⚙️</span>
+        <span>Cài đặt</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Filter Sheet (Bottom Sheet) - Hidden by default -->
+  <div class="bottom-sheet" style="display: none;">
+    <div class="bottom-sheet-handle"></div>
+    <div style="padding: var(--space-4);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
+        <h3 style="font-weight: var(--font-semibold);">Lọc giao dịch</h3>
+        <button style="background: none; border: none; font-size: 1.25rem; cursor: pointer;">✕</button>
+      </div>
+
+      <!-- Thời gian -->
+      <div class="filter-section">
+        <label class="filter-label">Thời gian</label>
+        <div class="filter-chips">
+          <button class="chip selected">7 ngày</button>
+          <button class="chip">30 ngày</button>
+          <button class="chip">Tháng này</button>
+          <button class="chip">Tùy chọn...</button>
+        </div>
+      </div>
+
+      <!-- Loại -->
+      <div class="filter-section">
+        <label class="filter-label">Loại</label>
+        <select>
+          <option>Tất cả</option>
+          <option>Thu</option>
+          <option>Chi</option>
+        </select>
+      </div>
+
+      <!-- Danh mục -->
+      <div class="filter-section">
+        <label class="filter-label">Danh mục</label>
+        <div class="filter-chips">
+          <button class="chip selected">🍴 Ăn uống</button>
+          <button class="chip selected">☕ Cafe</button>
+          <button class="chip">🚗 Xăng xe</button>
+          <button class="chip">🛒 Mua sắm</button>
+          <button class="chip">💼 Lương</button>
+          <button class="chip">🏠 Nhà cửa</button>
+        </div>
+      </div>
+
+      <!-- Tài khoản -->
+      <div class="filter-section">
+        <label class="filter-label">Tài khoản</label>
+        <select>
+          <option>Tất cả</option>
+          <option>Vietcombank</option>
+          <option>Momo</option>
+          <option>Cash</option>
+        </select>
+      </div>
+
+      <!-- Số tiền -->
+      <div class="filter-section">
+        <label class="filter-label">Số tiền</label>
+        <div class="filter-range">
+          <input type="number" placeholder="Min" style="flex: 1;">
+          <span class="filter-range-separator">─</span>
+          <input type="number" placeholder="Max" style="flex: 1;">
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="filter-actions">
+        <button class="btn btn-secondary">Đặt lại</button>
+        <button class="btn btn-primary">
+          Áp dụng <span class="filter-badge">15</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

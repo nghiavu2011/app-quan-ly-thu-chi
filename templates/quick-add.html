@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Quick Add - Thêm giao dịch</title>
+  <link rel="stylesheet" href="../design-system.css">
+</head>
+<body>
+  <!-- Bottom Sheet Overlay -->
+  <div class="bottom-sheet-overlay" onclick="alert('Close bottom sheet')"></div>
+  
+  <!-- Quick Add Bottom Sheet -->
+  <div class="bottom-sheet" style="max-height: 85vh;">
+    <!-- Handle Bar -->
+    <div class="bottom-sheet-handle"></div>
+    
+    <div style="padding: 0 var(--space-4) var(--space-4);">
+      <!-- Thu/Chi Toggle -->
+      <div class="switch" style="margin-bottom: var(--space-4); justify-content: center;">
+        <span class="switch-option income">THU</span>
+        <span class="switch-option expense active">CHI</span>
+      </div>
+      
+      <!-- Amount Display -->
+      <div class="amount-display" style="font-size: 2.5rem; margin-bottom: var(--space-4);">
+        500,000 <span class="amount-display-currency">₫</span>
+      </div>
+      
+      <!-- Category Chips -->
+      <div class="chip-group" style="margin-bottom: var(--space-4); overflow-x: auto; flex-wrap: nowrap; padding-bottom: var(--space-2);">
+        <button class="chip selected">
+          <span class="chip-icon">☕</span>
+          <span>Cafe</span>
+        </button>
+        <button class="chip">
+          <span class="chip-icon">🍴</span>
+          <span>Ăn uống</span>
+        </button>
+        <button class="chip">
+          <span class="chip-icon">🚗</span>
+          <span>Xăng xe</span>
+        </button>
+        <button class="chip">
+          <span class="chip-icon">🛒</span>
+          <span>Mua sắm</span>
+        </button>
+        <button class="chip">
+          <span class="chip-icon">💡</span>
+          <span>Điện</span>
+        </button>
+        <button class="chip">
+          <span class="chip-icon">📱</span>
+          <span>Điện thoại</span>
+        </button>
+      </div>
+      
+      <!-- Account & Date -->
+      <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+        <div class="date-field" style="flex: 1;">
+          <span class="date-field-icon">💳</span>
+          <span class="date-field-value">Vietcombank ▼</span>
+        </div>
+        <div class="date-field" style="flex: 1;">
+          <span class="date-field-icon">📅</span>
+          <span class="date-field-value">Hôm nay ▼</span>
+        </div>
+      </div>
+      
+      <!-- Note Input -->
+      <input type="text" placeholder="📝 Ghi chú (tùy chọn)" style="margin-bottom: var(--space-4);">
+      
+      <!-- Action Buttons -->
+      <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+        <button class="btn btn-secondary" style="flex: 1;">
+          <span>🎤</span>
+          <span>Voice</span>
+        </button>
+        <button class="btn btn-primary btn-lg" style="flex: 2;">
+          <span>✓</span>
+          <span>Lưu - 500k</span>
+        </button>
+      </div>
+      
+      <!-- Number Keypad -->
+      <div class="keypad">
+        <button class="keypad-btn">1</button>
+        <button class="keypad-btn">2</button>
+        <button class="keypad-btn">3</button>
+        <button class="keypad-btn" style="font-size: 1.2rem;">⌫</button>
+        
+        <button class="keypad-btn">4</button>
+        <button class="keypad-btn">5</button>
+        <button class="keypad-btn">6</button>
+        <button class="keypad-btn helper">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <span style="font-size: var(--text-base);">k</span>
+            <span style="font-size: 10px;">000</span>
+          </div>
+        </button>
+        
+        <button class="keypad-btn">7</button>
+        <button class="keypad-btn">8</button>
+        <button class="keypad-btn">9</button>
+        <button class="keypad-btn helper">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <span style="font-size: var(--text-base);">tr</span>
+            <span style="font-size: 10px;">000000</span>
+          </div>
+        </button>
+        
+        <button class="keypad-btn">,</button>
+        <button class="keypad-btn">0</button>
+        <button class="keypad-btn">00</button>
+        <button class="keypad-btn primary">✓</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

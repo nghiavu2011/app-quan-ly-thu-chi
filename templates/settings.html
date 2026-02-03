@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cài đặt</title>
+  <link rel="stylesheet" href="../design-system.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <div class="topbar">
+      <div class="topbar-back" style="visibility: hidden;">
+        <span>←</span>
+      </div>
+      <div class="topbar-title">Cài đặt</div>
+      <div class="topbar-actions">
+        <button class="topbar-btn" aria-label="Profile">👤</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="app-content">
+      <!-- Settings List -->
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">📂</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Danh mục & Tags</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+        
+        <div class="divider" style="margin: 0;"></div>
+        
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">💳</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Tài khoản & Ví</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Import/Export Section -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">📥</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Import từ Excel</div>
+            <div class="list-item-subtitle">Nhập dữ liệu từ file Excel có sẵn</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+        
+        <div class="divider" style="margin: 0;"></div>
+        
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">📤</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Export ra Excel</div>
+            <div class="list-item-subtitle">Xuất dữ liệu ra file Excel để backup</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Backup & Sync -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">☁️</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Backup & Đồng bộ</div>
+            <div class="list-item-subtitle">Lần cuối: 02/02/2026 14:30</div>
+          </div>
+          <span class="list-item-value" style="font-size: var(--text-sm); color: var(--color-success);">✓ Đã bật</span>
+        </div>
+      </div>
+
+      <!-- Voice Settings -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">🎤</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Cài đặt giọng nói</div>
+            <div class="list-item-subtitle">Tiếng Việt • Nhận dạng nhanh</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">🔒</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Bảo mật</div>
+            <div class="list-item-subtitle">PIN • Face ID</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Appearance -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">🌙</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Giao diện</div>
+            <div class="list-item-subtitle">Light • Dark • Auto</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Accessibility -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">♿</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Trợ năng</div>
+            <div class="list-item-subtitle">Font lớn • Tương phản cao</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Help & About -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">❓</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Hướng dẫn sử dụng</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+        
+        <div class="divider" style="margin: 0;"></div>
+        
+        <div class="list-item" style="cursor: pointer;">
+          <span class="list-item-icon">ℹ️</span>
+          <div class="list-item-content">
+            <div class="list-item-title">Về ứng dụng</div>
+            <div class="list-item-subtitle">Version 1.0.0</div>
+          </div>
+          <span class="list-item-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Logout -->
+      <button class="btn btn-danger btn-block" style="margin-top: var(--space-6);">
+        Đăng xuất
+      </button>
+
+      <!-- App Info -->
+      <div style="text-align: center; margin-top: var(--space-6); color: var(--color-text-muted); font-size: var(--text-sm);">
+        <div>Kakeibo Pro v1.0.0</div>
+        <div style="margin-top: var(--space-1);">© 2026 Kakeibo Team</div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏠</span>
+        <span>Trang chủ</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">💰</span>
+        <span>Thu Chi</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏘️</span>
+        <span>Thuê Nhà</span>
+      </a>
+      <a href="#" class="bottom-nav-item active">
+        <span class="bottom-nav-item-icon">⚙️</span>
+        <span>Cài đặt</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

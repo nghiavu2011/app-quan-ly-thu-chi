@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Dashboard - Thu Chi Gia Đình</title>
+  <link rel="stylesheet" href="../design-system.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <div class="topbar">
+      <div class="topbar-back">
+        <span>←</span>
+      </div>
+      <div class="topbar-title">Dashboard</div>
+      <div class="topbar-actions">
+        <div class="period-selector">
+          <span class="period-selector-icon">📅</span>
+          <span class="period-selector-value">T1/2026 ▼</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="app-content">
+      <!-- KPI Cards Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-card-label">Thu Nhập</div>
+          <div class="kpi-card-value positive">+29.6tr</div>
+          <div class="kpi-card-trend up">
+            <span>▲</span>
+            <span>+5%</span>
+          </div>
+        </div>
+        
+        <div class="kpi-card">
+          <div class="kpi-card-label">Chi Tiêu</div>
+          <div class="kpi-card-value negative">-18.3tr</div>
+          <div class="kpi-card-trend down">
+            <span>▼</span>
+            <span>-3%</span>
+          </div>
+        </div>
+        
+        <div class="kpi-card">
+          <div class="kpi-card-label">Tiết Kiệm</div>
+          <div class="kpi-card-value positive">11.3tr</div>
+          <div class="kpi-card-trend up">
+            <span>▲</span>
+            <span>+12%</span>
+          </div>
+        </div>
+        
+        <div class="kpi-card">
+          <div class="kpi-card-label">Tỷ Lệ</div>
+          <div class="kpi-card-value positive">38.2%</div>
+          <div class="kpi-card-trend" style="color: var(--color-success);">
+            <span>🎯</span>
+            <span>Good</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart Card -->
+      <div class="chart-card" style="margin-top: var(--space-4);">
+        <div class="chart-card-header">
+          <span class="chart-card-title">Chi tiêu theo danh mục</span>
+          <span class="chart-card-action">⋯</span>
+        </div>
+        <div class="chart-card-body" style="display: flex; align-items: center; justify-content: center;">
+          <!-- Placeholder for Donut Chart -->
+          <div style="width: 180px; height: 180px; border-radius: 50%; background: conic-gradient(
+            var(--color-primary) 0% 25%,
+            var(--color-secondary) 25% 45%,
+            var(--color-warning) 45% 60%,
+            var(--color-success) 60% 70%,
+            var(--color-border) 70% 100%
+          ); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 100px; height: 100px; background: var(--color-surface); border-radius: 50%;"></div>
+          </div>
+        </div>
+        <div class="chart-card-legend">
+          <div class="chart-legend-item">
+            <span class="chart-legend-dot" style="background: var(--color-primary);"></span>
+            <span>🍴 25%</span>
+          </div>
+          <div class="chart-legend-item">
+            <span class="chart-legend-dot" style="background: var(--color-secondary);"></span>
+            <span>🏠 20%</span>
+          </div>
+          <div class="chart-legend-item">
+            <span class="chart-legend-dot" style="background: var(--color-warning);"></span>
+            <span>🚗 15%</span>
+          </div>
+          <div class="chart-legend-item">
+            <span class="chart-legend-dot" style="background: var(--color-success);"></span>
+            <span>📱 10%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend Chart -->
+      <div class="chart-card" style="margin-top: var(--space-4);">
+        <div class="chart-card-header">
+          <span class="chart-card-title">Xu hướng 12 tháng</span>
+          <div class="toggle-group" style="width: auto;">
+            <button class="toggle-btn active">Tháng</button>
+            <button class="toggle-btn">Năm</button>
+          </div>
+        </div>
+        <div class="chart-card-body">
+          <!-- Placeholder for Line Chart -->
+          <div style="height: 150px; display: flex; align-items: flex-end; justify-content: space-around; padding: var(--space-4) 0;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+              <div style="width: 8px; height: 60px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
+              <div style="width: 8px; height: 40px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
+              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T1</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+              <div style="width: 8px; height: 80px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
+              <div style="width: 8px; height: 50px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
+              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T2</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+              <div style="width: 8px; height: 90px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
+              <div style="width: 8px; height: 55px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
+              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T3</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+              <div style="width: 8px; height: 70px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
+              <div style="width: 8px; height: 45px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
+              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T4</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+              <div style="width: 8px; height: 85px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
+              <div style="width: 8px; height: 60px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
+              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T5</span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
+              <div style="width: 8px; height: 100px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
+              <div style="width: 8px; height: 65px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
+              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T6</span>
+            </div>
+          </div>
+          <!-- Legend -->
+          <div style="display: flex; justify-content: center; gap: var(--space-4); margin-top: var(--space-3);">
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <div style="width: 12px; height: 3px; background: var(--color-success);"></div>
+              <span style="font-size: var(--text-sm);">Thu</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <div style="width: 12px; height: 3px; background: var(--color-danger);"></div>
+              <span style="font-size: var(--text-sm);">Chi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Insights -->
+      <div class="insight-card" style="margin-top: var(--space-4);">
+        <div class="insight-header">
+          <span class="insight-icon">💡</span>
+          <span class="insight-title">AI Insights</span>
+        </div>
+        <div class="insight-content">
+          "Cafe tăng 30% so với tháng trước. Cân nhắc giảm bớt để tiết kiệm thêm ~500k/tháng"
+        </div>
+        <div class="insight-action">
+          <span>Xem chi tiết</span>
+          <span>→</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAB -->
+    <button class="fab" aria-label="Thêm giao dịch">+</button>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏠</span>
+        <span>Trang chủ</span>
+      </a>
+      <a href="#" class="bottom-nav-item active">
+        <span class="bottom-nav-item-icon">💰</span>
+        <span>Thu Chi</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">🏘️</span>
+        <span>Thuê Nhà</span>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-item-icon">⚙️</span>
+        <span>Cài đặt</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kakeibo Pro - UI Preview</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+      color: white;
+      border-radius: 16px;
+    }
+    .header h1 { font-size: 2rem; margin-bottom: 8px; }
+    .header p { opacity: 0.9; }
+    .device-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .device-frame {
+      background: white;
+      border-radius: 40px;
+      padding: 15px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      border: 8px solid #333;
+    }
+    .device-screen {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 30px;
+      background: #f3f4f6;
+    }
+    .device-label {
+      text-align: center;
+      margin-top: 12px;
+      font-weight: 600;
+      color: #333;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .device-grid {
+        grid-template-columns: 1fr;
+      }
+      .device-screen {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🏦 Kakeibo Pro</h1>
+    <p>UI Component Preview - Mobile Banking App</p>
+  </div>
+
+  <div class="device-grid">
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/home.html"></iframe>
+      <div class="device-label">📱 Trang chủ (Home)</div>
+    </div>
+
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/quick-add.html"></iframe>
+      <div class="device-label">➕ Quick Add (Bottom Sheet)</div>
+    </div>
+
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/dashboard.html"></iframe>
+      <div class="device-label">📊 Dashboard Thu Chi</div>
+    </div>
+
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/transactions-list.html"></iframe>
+      <div class="device-label">📝 Danh sách giao dịch</div>
+    </div>
+
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/rental-units.html"></iframe>
+      <div class="device-label">🏘️ Quản lý phòng</div>
+    </div>
+
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/rental-tenants.html"></iframe>
+      <div class="device-label">👥 Người thuê</div>
+    </div>
+
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/rental-receivables.html"></iframe>
+      <div class="device-label">💰 Công nợ</div>
+    </div>
+
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/settings.html"></iframe>
+      <div class="device-label">⚙️ Cài đặt</div>
+    </div>
+
+    <div class="device-frame">
+      <iframe class="device-screen" src="templates/voice-input.html"></iframe>
+      <div class="device-label">🎤 Nhập giọng nói</div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 40px; color: #666;">
+    <p>💡 Tip: Click vào từng màn hình để tương tác (nếu có interactive elements)</p>
+    <p>Thiết kế theo chuẩn Mobile-first 375px base + Responsive</p>
+  </div>
+</body>
+</html>
