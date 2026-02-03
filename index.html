@@ -4,160 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Kakeibo Pro - Ứng dụng Quản Lý Tài Chính Gia Đình & Thuê Nhà">
-  <meta name="theme-color" content="#2563EB">
+  <meta name="theme-color" content="#136dec">
   <title>Kakeibo Pro - Quản Lý Tài Chính</title>
-  <link rel="stylesheet" href="design-system.css">
-  <link rel="manifest" href="manifest.json">
-  <style>
-    /* Landing page styles */
-    .landing {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .landing-logo {
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
-    .landing h1 {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-      font-weight: 700;
-    }
-    .landing p {
-      font-size: 1.125rem;
-      opacity: 0.9;
-      max-width: 500px;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
-    .landing-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      width: 100%;
-      max-width: 320px;
-    }
-    .landing-btn {
-      padding: 16px 32px;
-      border-radius: 12px;
-      border: none;
-      font-size: 1.125rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .landing-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-    .landing-btn-primary {
-      background: white;
-      color: #2563EB;
-    }
-    .landing-btn-secondary {
-      background: rgba(255,255,255,0.2);
-      color: white;
-      border: 2px solid rgba(255,255,255,0.3);
-    }
-    .landing-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
-      max-width: 800px;
-      margin-top: 60px;
-    }
-    .feature {
-      background: rgba(255,255,255,0.1);
-      padding: 24px;
-      border-radius: 16px;
-      backdrop-filter: blur(10px);
-    }
-    .feature-icon {
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-    .feature h3 {
-      font-size: 1.125rem;
-      margin-bottom: 8px;
-    }
-    .feature p {
-      font-size: 0.875rem;
-      margin: 0;
-      opacity: 0.8;
-    }
-    @media (max-width: 480px) {
-      .landing h1 { font-size: 2rem; }
-      .landing p { font-size: 1rem; }
-      .landing-features {
-        grid-template-columns: 1fr;
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#136dec",
+            "primary-dark": "#0b4eaf",
+          },
+          fontFamily: {
+            display: ["Lexend", "sans-serif"]
+          }
+        }
       }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
     }
   </style>
 </head>
-<body>
-  <div class="landing">
-    <div class="landing-logo">🏦</div>
-    <h1>Kakeibo Pro</h1>
-    <p>Ứng dụng Quản Lý Tài Chính Gia Đình & Hoạch Toán Thuê Nhà. Hỗ trợ nhập liệu bằng giọng nói và import/export Excel.</p>
+<body class="min-h-screen bg-gradient-to-br from-primary to-blue-600 text-white flex flex-col">
+  <!-- Landing Content -->
+  <div class="flex-1 flex flex-col items-center justify-center px-6 py-12 text-center">
+    <!-- Logo -->
+    <div class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mb-8 shadow-2xl">
+      <span class="material-symbols-outlined text-6xl">account_balance_wallet</span>
+    </div>
     
-    <div class="landing-buttons">
-      <a href="templates/home.html" class="landing-btn landing-btn-primary">
-        <span>🚀</span>
-        <span>Vào ứng dụng</span>
+    <!-- Title -->
+    <h1 class="text-4xl font-bold mb-4">Kakeibo Pro</h1>
+    <p class="text-xl text-blue-100 mb-2">Quản Lý Tài Chính Gia Đình</p>
+    <p class="text-lg text-blue-200 mb-8">& Hoạch Toán Thuê Nhà</p>
+    
+    <!-- Description -->
+    <p class="text-blue-100 max-w-md mb-12 leading-relaxed">
+      Ứng dụng giúp bạn quản lý thu chi, theo dõi dòng tiền từ việc cho thuê nhà, 
+      và hỗ trợ nhập liệu bằng giọng nói.
+    </p>
+    
+    <!-- CTA Buttons -->
+    <div class="flex flex-col gap-4 w-full max-w-sm">
+      <a href="templates/home.html" 
+         class="bg-white text-primary font-bold py-4 px-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined">rocket_launch</span>
+        <span>Vào Ứng Dụng</span>
       </a>
-      <a href="preview.html" class="landing-btn landing-btn-secondary">
-        <span>👁️</span>
+      
+      <a href="preview.html" 
+         class="bg-white/20 backdrop-blur-sm text-white font-semibold py-4 px-8 rounded-2xl border-2 border-white/30 hover:bg-white/30 transition-all flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined">preview</span>
         <span>Xem UI Preview</span>
       </a>
     </div>
-
-    <div class="landing-features">
-      <div class="feature">
-        <div class="feature-icon">💰</div>
-        <h3>Thu Chi Gia Đình</h3>
-        <p>Theo dõi thu chi, phân loại danh mục, quản lý nhiều tài khoản</p>
+  </div>
+  
+  <!-- Features -->
+  <div class="bg-white/10 backdrop-blur-sm py-8 px-6">
+    <div class="max-w-md mx-auto grid grid-cols-2 gap-4">
+      <div class="flex items-center gap-3 text-left">
+        <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+          <span class="material-symbols-outlined">payments</span>
+        </div>
+        <div>
+          <p class="font-semibold text-sm">Thu Chi</p>
+          <p class="text-xs text-blue-200">Gia đình</p>
+        </div>
       </div>
-      <div class="feature">
-        <div class="feature-icon">🏘️</div>
-        <h3>Quản Lý Thuê Nhà</h3>
-        <p>Quản lý phòng, người thuê, công nợ, thu tiền định kỳ</p>
+      
+      <div class="flex items-center gap-3 text-left">
+        <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+          <span class="material-symbols-outlined">apartment</span>
+        </div>
+        <div>
+          <p class="font-semibold text-sm">Quản Lý</p>
+          <p class="text-xs text-blue-200">Nhà thuê</p>
+        </div>
       </div>
-      <div class="feature">
-        <div class="feature-icon">🎤</div>
-        <h3>Nhập Giọng Nói</h3>
-        <p>Nhập giao dịch nhanh bằng giọng nói tiếng Việt</p>
+      
+      <div class="flex items-center gap-3 text-left">
+        <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+          <span class="material-symbols-outlined">mic</span>
+        </div>
+        <div>
+          <p class="font-semibold text-sm">Voice</p>
+          <p class="text-xs text-blue-200">Nhập nhanh</p>
+        </div>
       </div>
-      <div class="feature">
-        <div class="feature-icon">📊</div>
-        <h3>Báo Cáo Trực Quan</h3>
-        <p>Biểu đồ, AI Insights, so sánh tháng/năm</p>
+      
+      <div class="flex items-center gap-3 text-left">
+        <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+          <span class="material-symbols-outlined">bar_chart</span>
+        </div>
+        <div>
+          <p class="font-semibold text-sm">Báo Cáo</p>
+          <p class="text-xs text-blue-200">Trực quan</p>
+        </div>
       </div>
-    </div>
-
-    <div style="margin-top: 60px; opacity: 0.6; font-size: 0.875rem;">
-      <p>Version 1.0.0 • Made with ❤️ in Vietnam</p>
     </div>
   </div>
-
-  <script>
-    // Register Service Worker for PWA
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('Service Worker registered'))
-        .catch(err => console.log('Service Worker registration failed'));
-    }
-  </script>
+  
+  <!-- Footer -->
+  <div class="py-6 text-center text-blue-200 text-sm">
+    <p>Version 1.0.0 • Made with ❤️ in Vietnam</p>
+  </div>
 </body>
 </html>

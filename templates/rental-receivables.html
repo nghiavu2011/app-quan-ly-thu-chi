@@ -1,199 +1,216 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Công nợ - Thuê Nhà</title>
-  <link rel="stylesheet" href="../design-system.css">
-</head>
-<body>
-  <div class="app">
-    <!-- Header -->
-    <div class="topbar">
-      <div class="topbar-back">
-        <span>←</span>
-        <span>Công nợ</span>
-      </div>
-      <div class="topbar-actions">
-        <div class="period-selector">
-          <span class="period-selector-icon">📅</span>
-          <span class="period-selector-value">T1/2026 ▼</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="app-content">
-      <!-- Total Summary -->
-      <div class="card" style="margin-bottom: var(--space-4); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white;">
-        <div class="kpi-card-label" style="color: rgba(255,255,255,0.8);">Tổng chờ thu</div>
-        <div style="font-size: var(--text-2xl); font-weight: var(--font-bold); margin-top: var(--space-2);">
-          10,500,000 ₫
-        </div>
-      </div>
-
-      <!-- Tabs -->
-      <div class="toggle-group" style="margin-bottom: var(--space-4);">
-        <button class="toggle-btn active">
-          Chờ thu <span class="badge" style="background: var(--color-warning); color: white; margin-left: var(--space-2);">5</span>
-        </button>
-        <button class="toggle-btn">
-          Quá hạn <span class="badge" style="background: var(--color-danger); color: white; margin-left: var(--space-2);">2</span>
-        </button>
-        <button class="toggle-btn">
-          Đã thu <span class="badge" style="background: var(--color-success); color: white; margin-left: var(--space-2);">8</span>
-        </button>
-      </div>
-
-      <!-- Chờ thu Section -->
-      <div class="divider-text" style="margin-bottom: var(--space-3);">
-        <span>═══ Chờ thu ═══</span>
-      </div>
-
-      <!-- Receivable Card: Pending -->
-      <div class="receivable-card">
-        <div class="receivable-header">
-          <div>
-            <span class="badge badge-warning" style="margin-bottom: var(--space-1); display: inline-flex;">
-              <span class="badge-dot"></span>
-              <span>Chờ thu</span>
-            </span>
-            <div class="receivable-title">P101 - Tiền thuê T1</div>
-          </div>
-          <div class="receivable-amount">3,500,000 ₫</div>
-        </div>
-        <div class="receivable-tenant">Nguyễn Văn A</div>
-        <div class="receivable-due">
-          <span>⏰</span>
-          <span>Hạn: 05/01</span>
-        </div>
-        <div class="receivable-actions">
-          <button class="btn btn-ghost btn-sm" style="flex: 1;">
-            <span>📞</span>
-            <span>Gọi</span>
-          </button>
-          <button class="btn btn-primary btn-sm" style="flex: 1;">
-            <span>✓</span>
-            <span>Đã thu</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Receivable Card: Pending (2) -->
-      <div class="receivable-card" style="margin-top: var(--space-3);">
-        <div class="receivable-header">
-          <div>
-            <span class="badge badge-warning" style="margin-bottom: var(--space-1); display: inline-flex;">
-              <span class="badge-dot"></span>
-              <span>Chờ thu</span>
-            </span>
-            <div class="receivable-title">P102 - Tiền thuê T1</div>
-          </div>
-          <div class="receivable-amount">3,200,000 ₫</div>
-        </div>
-        <div class="receivable-tenant">Trần Thị C</div>
-        <div class="receivable-due">
-          <span>⏰</span>
-          <span>Hạn: 10/01</span>
-        </div>
-        <div class="receivable-actions">
-          <button class="btn btn-ghost btn-sm" style="flex: 1;">
-            <span>📞</span>
-            <span>Gọi</span>
-          </button>
-          <button class="btn btn-primary btn-sm" style="flex: 1;">
-            <span>✓</span>
-            <span>Đã thu</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Quá hạn Section -->
-      <div class="divider-text" style="margin: var(--space-4) 0 var(--space-3);">
-        <span>═══ Quá hạn ═══</span>
-      </div>
-
-      <!-- Receivable Card: Overdue -->
-      <div class="receivable-card overdue">
-        <div class="receivable-header">
-          <div>
-            <span class="badge badge-danger" style="margin-bottom: var(--space-1); display: inline-flex;">
-              <span class="badge-dot"></span>
-              <span>Quá hạn</span>
-            </span>
-            <div class="receivable-title">P203 - Điện T12</div>
-          </div>
-          <div class="receivable-amount">450,000 ₫</div>
-        </div>
-        <div class="receivable-tenant">Trần Thị B</div>
-        <div class="receivable-due overdue">
-          <span>🔴</span>
-          <span>Quá 5 ngày</span>
-        </div>
-        <div class="receivable-actions">
-          <button class="btn btn-ghost btn-sm" style="flex: 1;">
-            <span>📞</span>
-            <span>Gọi</span>
-          </button>
-          <button class="btn btn-primary btn-sm" style="flex: 1;">
-            <span>✓</span>
-            <span>Đã thu</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Receivable Card: Overdue (2) -->
-      <div class="receivable-card overdue" style="margin-top: var(--space-3);">
-        <div class="receivable-header">
-          <div>
-            <span class="badge badge-danger" style="margin-bottom: var(--space-1); display: inline-flex;">
-              <span class="badge-dot"></span>
-              <span>Quá hạn</span>
-            </span>
-            <div class="receivable-title">P105 - Tiền thuê T1</div>
-          </div>
-          <div class="receivable-amount">3,000,000 ₫</div>
-        </div>
-        <div class="receivable-tenant">Lê Văn D</div>
-        <div class="receivable-due overdue">
-          <span>🔴</span>
-          <span>Quá 3 ngày</span>
-        </div>
-        <div class="receivable-actions">
-          <button class="btn btn-ghost btn-sm" style="flex: 1;">
-            <span>📞</span>
-            <span>Gọi</span>
-          </button>
-          <button class="btn btn-primary btn-sm" style="flex: 1;">
-            <span>✓</span>
-            <span>Đã thu</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- FAB -->
-    <button class="fab" aria-label="Thu tiền">💰</button>
-
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏠</span>
-        <span>Trang chủ</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">💰</span>
-        <span>Thu Chi</span>
-      </a>
-      <a href="#" class="bottom-nav-item active">
-        <span class="bottom-nav-item-icon">🏘️</span>
-        <span>Thuê Nhà</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">⚙️</span>
-        <span>Cài đặt</span>
-      </a>
-    </nav>
-  </div>
-</body>
-</html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Khoản thu cần thu</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "primary-dark": "#105ac2",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                        "success": "#16a34a",
+                        "warning": "#e11d48",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 px-4 pt-safe-top pb-2 shadow-sm">
+<div class="h-4"></div> <!-- Status bar spacer -->
+<div class="flex items-center h-12 justify-between">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" onclick="history.back()">
+<span class="material-symbols-outlined text-[#111418] dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<div class="flex items-center justify-end">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[#111418] dark:text-white" style="font-size: 24px;">filter_list</span>
+</button>
+</div>
+</div>
+<div class="mt-2">
+<h1 class="text-[#111418] dark:text-white tracking-tight text-[28px] font-bold leading-tight">Khoản thu tháng này</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Tháng 10, 2023</p>
+</div>
+</header>
+<!-- Stats Section -->
+<section class="p-4">
+<div class="flex flex-wrap gap-4">
+<!-- Total Revenue Card -->
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-5 bg-surface-light dark:bg-surface-dark border border-[#dbe0e6] dark:border-gray-700 shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">account_balance_wallet</span>
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Tổng cần thu</p>
+</div>
+<p class="text-[#111418] dark:text-white tracking-tight text-xl font-bold leading-tight">20.000.000 đ</p>
+</div>
+<!-- Remaining/Unpaid Card -->
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-5 bg-surface-light dark:bg-surface-dark border border-[#dbe0e6] dark:border-gray-700 shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 h-full w-1 bg-warning"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-warning text-xl">pending_actions</span>
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Còn lại</p>
+</div>
+<p class="text-warning tracking-tight text-xl font-bold leading-tight">8.500.000 đ</p>
+</div>
+</div>
+</section>
+<!-- Receivables List -->
+<section class="flex flex-col gap-4 px-4 pb-4">
+<h2 class="text-lg font-bold text-[#111418] dark:text-white px-1">Danh sách phòng</h2>
+<!-- Unpaid Item 1 -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border border-gray-100 dark:border-gray-600" data-alt="Portrait of Nguyen Van A" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJfW3Nv5xdY-kpr56KC2xA7uHzZytL2cYa4HsWLLtZtv2MrDj_PlDbMke9Rn23VLdjQI0Z6r3tJsJBYIyzdubrVUyEWBVMD8o-AR-A1UoqHrezV6YjZjnhOQ3In5pyZtKJB7hWdBCNWDZsSKx0DwAj-Nkb9NN7peK_z80UxdlgWnL1D6U-iO4YW9AWKZ6WI1eMpeYQ3TNbYR0iI1aDmB8sQCgN8xNDV0_vN3-nt5FSCJ87StVD0CjZkw5vQCdDslTPfDyPNXf_j-s");'>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-base font-bold leading-normal">Nguyễn Văn A</p>
+<p class="text-[#617289] dark:text-gray-400 text-sm font-normal leading-normal">Phòng 101</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-[#111418] dark:text-white text-base font-bold leading-normal">3.500.000 đ</p>
+<span class="inline-flex items-center rounded-full bg-red-50 dark:bg-red-900/30 px-2.5 py-0.5 text-xs font-medium text-warning mt-1">
+                            Chưa thu
+                        </span>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-3 mt-1">
+<p class="text-xs text-gray-500">Hạn nộp: 05/10/2023</p>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary hover:bg-primary-dark text-white h-9 px-4 text-sm font-medium transition-colors w-fit">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+                        Gửi nhắc nhở
+                    </button>
+</div>
+</div>
+<!-- Unpaid Item 2 -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border border-gray-100 dark:border-gray-600" data-alt="Portrait of Le Van C" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAi_TA-nWzyAGam7NLqnY_hT4AVHGjiVCPb1NrG_kSGzleigB-_jWO-3XOW_P3Xxj8q_7J4WyJTCoLjunLSLXLhHMYz9ISjXDF5fkJSo-Ue0l8BYXgVDXryaNhZ9GnTmUQKmXM4yElsvK9d4HB_9Wu_ShBidYZQpXGYn80V9LUgBUwIiMwqjcVJCsH6weTFopOf1cx70wI0_Y6uGKnTaHY5-pbpZ8n5UQ78V9cXUBbSwDo5KjenbeS4GZpdkDJP9SX5x1kcME3HCXM");'>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-base font-bold leading-normal">Lê Văn C</p>
+<p class="text-[#617289] dark:text-gray-400 text-sm font-normal leading-normal">Phòng 201</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-[#111418] dark:text-white text-base font-bold leading-normal">5.000.000 đ</p>
+<span class="inline-flex items-center rounded-full bg-red-50 dark:bg-red-900/30 px-2.5 py-0.5 text-xs font-medium text-warning mt-1">
+                            Chưa thu
+                        </span>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-3 mt-1">
+<p class="text-xs text-red-500 font-medium">Quá hạn 2 ngày</p>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary hover:bg-primary-dark text-white h-9 px-4 text-sm font-medium transition-colors w-fit">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+                        Gửi nhắc nhở
+                    </button>
+</div>
+</div>
+<!-- Paid Item 1 -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-200 dark:border-gray-700 opacity-80">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border border-gray-100 dark:border-gray-600" data-alt="Portrait of Tran Thi B" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9hCtYGRaDPPShsQ1WAOuWHDuSXs9vn0RFs62L4J2ApkM_ZgAl756DL-0ssLq9_xv8Gnzl9Y97VMMojwHk-WvWjVPCEmmOpN6m7cCBwpdnBq39KyJ8OFGJ_QTnPjD1hEXkXhh0iyPu0t7dkcm7ubshTTT4zSiS58PYINpRdGAHaj4OBP9rejG35vyX68jmS0txH8bEPJmeWen3aFvWBRNUgpdKaWw79SAJGANzUxj0C2aTL0mqf5PyhKy3JUh97tib1OMQhgZ0lI8");'>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Trần Thị B</p>
+<p class="text-[#617289] dark:text-gray-400 text-sm font-normal leading-normal">Phòng 102</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-gray-500 dark:text-gray-400 text-base font-bold leading-normal line-through decoration-gray-400">4.000.000 đ</p>
+<span class="inline-flex items-center rounded-full bg-green-50 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-success mt-1">
+                            Đã thu
+                        </span>
+</div>
+</div>
+</div>
+<!-- Paid Item 2 -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-200 dark:border-gray-700 opacity-80">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border border-gray-100 dark:border-gray-600" data-alt="Portrait of Pham Van D" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmSEJScKKWJldynnOYrYoIfP3zzTnGp9XNxJrUydJZYD2xb3rqsWBfPSc05AB0Z7urFYzNJA7wcdiQWBT1103skIqNtJ_v2ewuXOR-Xhg8iSMwZuiqN_wuxnOW2rS96PEmvWVfGWi4Mcu0oIAx-LhhVGrMyj7QZHcOOekfK4UZokYq4vS4SLUbvZZszk9BHqG49oZDdwTyF7BT5TFPAv0_V-AGTZYHFMCOdWlGojWs0mmGIJhbTWnalYBpnoccvWKBShcDkCkHC_0");'>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Phạm Văn D</p>
+<p class="text-[#617289] dark:text-gray-400 text-sm font-normal leading-normal">Phòng 301</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-gray-500 dark:text-gray-400 text-base font-bold leading-normal line-through decoration-gray-400">7.500.000 đ</p>
+<span class="inline-flex items-center rounded-full bg-green-50 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-success mt-1">
+                            Đã thu
+                        </span>
+</div>
+</div>
+</div>
+<!-- Add new receivable FAB substitute/Button -->
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-white dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-600 p-4 text-gray-500 dark:text-gray-400 hover:border-primary hover:text-primary transition-colors" onclick="location.href='quick-add.html'">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-medium">Thêm khoản thu mới</span>
+</button>
+</section>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 z-20 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pb-safe-bottom">
+<div class="grid h-16 grid-cols-4 items-center justify-items-center">
+<button class="group flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary" onclick="location.href='home.html'">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Trang chủ</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-1 text-primary" onclick="location.href='rental-receivables.html'">
+<span class="material-symbols-outlined text-[24px] fill-current">account_balance_wallet</span>
+<span class="text-[10px] font-medium">Khoản thu</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary" onclick="location.href='rental-tenants.html'">
+<span class="material-symbols-outlined text-[24px]">people</span>
+<span class="text-[10px] font-medium">Khách thuê</span>
+</button>
+<button class="group flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary" onclick="location.href='settings.html'">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<span class="text-[10px] font-medium">Cài đặt</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

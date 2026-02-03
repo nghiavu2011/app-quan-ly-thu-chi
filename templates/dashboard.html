@@ -1,201 +1,316 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Dashboard - Thu Chi Gia Đình</title>
-  <link rel="stylesheet" href="../design-system.css">
-</head>
-<body>
-  <div class="app">
-    <!-- Header -->
-    <div class="topbar">
-      <div class="topbar-back">
-        <span>←</span>
-      </div>
-      <div class="topbar-title">Dashboard</div>
-      <div class="topbar-actions">
-        <div class="period-selector">
-          <span class="period-selector-icon">📅</span>
-          <span class="period-selector-value">T1/2026 ▼</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="app-content">
-      <!-- KPI Cards Grid -->
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-card-label">Thu Nhập</div>
-          <div class="kpi-card-value positive">+29.6tr</div>
-          <div class="kpi-card-trend up">
-            <span>▲</span>
-            <span>+5%</span>
-          </div>
-        </div>
-        
-        <div class="kpi-card">
-          <div class="kpi-card-label">Chi Tiêu</div>
-          <div class="kpi-card-value negative">-18.3tr</div>
-          <div class="kpi-card-trend down">
-            <span>▼</span>
-            <span>-3%</span>
-          </div>
-        </div>
-        
-        <div class="kpi-card">
-          <div class="kpi-card-label">Tiết Kiệm</div>
-          <div class="kpi-card-value positive">11.3tr</div>
-          <div class="kpi-card-trend up">
-            <span>▲</span>
-            <span>+12%</span>
-          </div>
-        </div>
-        
-        <div class="kpi-card">
-          <div class="kpi-card-label">Tỷ Lệ</div>
-          <div class="kpi-card-value positive">38.2%</div>
-          <div class="kpi-card-trend" style="color: var(--color-success);">
-            <span>🎯</span>
-            <span>Good</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Chart Card -->
-      <div class="chart-card" style="margin-top: var(--space-4);">
-        <div class="chart-card-header">
-          <span class="chart-card-title">Chi tiêu theo danh mục</span>
-          <span class="chart-card-action">⋯</span>
-        </div>
-        <div class="chart-card-body" style="display: flex; align-items: center; justify-content: center;">
-          <!-- Placeholder for Donut Chart -->
-          <div style="width: 180px; height: 180px; border-radius: 50%; background: conic-gradient(
-            var(--color-primary) 0% 25%,
-            var(--color-secondary) 25% 45%,
-            var(--color-warning) 45% 60%,
-            var(--color-success) 60% 70%,
-            var(--color-border) 70% 100%
-          ); display: flex; align-items: center; justify-content: center;">
-            <div style="width: 100px; height: 100px; background: var(--color-surface); border-radius: 50%;"></div>
-          </div>
-        </div>
-        <div class="chart-card-legend">
-          <div class="chart-legend-item">
-            <span class="chart-legend-dot" style="background: var(--color-primary);"></span>
-            <span>🍴 25%</span>
-          </div>
-          <div class="chart-legend-item">
-            <span class="chart-legend-dot" style="background: var(--color-secondary);"></span>
-            <span>🏠 20%</span>
-          </div>
-          <div class="chart-legend-item">
-            <span class="chart-legend-dot" style="background: var(--color-warning);"></span>
-            <span>🚗 15%</span>
-          </div>
-          <div class="chart-legend-item">
-            <span class="chart-legend-dot" style="background: var(--color-success);"></span>
-            <span>📱 10%</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Trend Chart -->
-      <div class="chart-card" style="margin-top: var(--space-4);">
-        <div class="chart-card-header">
-          <span class="chart-card-title">Xu hướng 12 tháng</span>
-          <div class="toggle-group" style="width: auto;">
-            <button class="toggle-btn active">Tháng</button>
-            <button class="toggle-btn">Năm</button>
-          </div>
-        </div>
-        <div class="chart-card-body">
-          <!-- Placeholder for Line Chart -->
-          <div style="height: 150px; display: flex; align-items: flex-end; justify-content: space-around; padding: var(--space-4) 0;">
-            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
-              <div style="width: 8px; height: 60px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
-              <div style="width: 8px; height: 40px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
-              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T1</span>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
-              <div style="width: 8px; height: 80px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
-              <div style="width: 8px; height: 50px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
-              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T2</span>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
-              <div style="width: 8px; height: 90px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
-              <div style="width: 8px; height: 55px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
-              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T3</span>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
-              <div style="width: 8px; height: 70px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
-              <div style="width: 8px; height: 45px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
-              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T4</span>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
-              <div style="width: 8px; height: 85px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
-              <div style="width: 8px; height: 60px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
-              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T5</span>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-2);">
-              <div style="width: 8px; height: 100px; background: var(--color-success); border-radius: var(--radius-sm);"></div>
-              <div style="width: 8px; height: 65px; background: var(--color-danger); border-radius: var(--radius-sm);"></div>
-              <span style="font-size: var(--text-xs); color: var(--color-text-muted);">T6</span>
-            </div>
-          </div>
-          <!-- Legend -->
-          <div style="display: flex; justify-content: center; gap: var(--space-4); margin-top: var(--space-3);">
-            <div style="display: flex; align-items: center; gap: var(--space-2);">
-              <div style="width: 12px; height: 3px; background: var(--color-success);"></div>
-              <span style="font-size: var(--text-sm);">Thu</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: var(--space-2);">
-              <div style="width: 12px; height: 3px; background: var(--color-danger);"></div>
-              <span style="font-size: var(--text-sm);">Chi</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- AI Insights -->
-      <div class="insight-card" style="margin-top: var(--space-4);">
-        <div class="insight-header">
-          <span class="insight-icon">💡</span>
-          <span class="insight-title">AI Insights</span>
-        </div>
-        <div class="insight-content">
-          "Cafe tăng 30% so với tháng trước. Cân nhắc giảm bớt để tiết kiệm thêm ~500k/tháng"
-        </div>
-        <div class="insight-action">
-          <span>Xem chi tiết</span>
-          <span>→</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- FAB -->
-    <button class="fab" aria-label="Thêm giao dịch">+</button>
-
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏠</span>
-        <span>Trang chủ</span>
-      </a>
-      <a href="#" class="bottom-nav-item active">
-        <span class="bottom-nav-item-icon">💰</span>
-        <span>Thu Chi</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏘️</span>
-        <span>Thuê Nhà</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">⚙️</span>
-        <span>Cài đặt</span>
-      </a>
-    </nav>
-  </div>
-</body>
-</html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Báo cáo &amp; Thống kê</title>
+<!-- Google Fonts: Lexend -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "primary-dark": "#0b4cb5",
+                        "danger": "#e73908",
+                        "success": "#07883b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2430",
+                        "text-main": "#111418",
+                        "text-sub": "#617289",
+                        "border-light": "#dbe0e6",
+                        "border-dark": "#2a3441"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar hiding */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display antialiased transition-colors duration-200">
+<div class="relative min-h-screen w-full flex flex-col mx-auto max-w-[480px] bg-background-light dark:bg-background-dark overflow-x-hidden pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-20 flex items-center justify-between px-4 py-3 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-b border-border-light dark:border-border-dark">
+<h1 class="text-xl font-bold tracking-tight text-text-main dark:text-white">Báo cáo &amp; Thống kê</h1>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-text-main dark:text-white" onclick="alert('Thông báo')">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Date Filter & Quick Actions -->
+<div class="flex items-center gap-3 px-4 py-4 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark pl-4 pr-3 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<p class="text-sm font-semibold whitespace-nowrap">Tháng 10, 2023</p>
+<span class="material-symbols-outlined text-text-sub text-[20px]">arrow_drop_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 dark:bg-primary/20 pl-4 pr-4">
+<p class="text-primary dark:text-blue-400 text-sm font-medium whitespace-nowrap">Tùy chỉnh</p>
+</button>
+</div>
+<!-- KPI Cards Grid -->
+<div class="grid grid-cols-2 gap-3 px-4 mb-6">
+<!-- Income Card -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-border-light dark:border-border-dark">
+<div class="flex items-start justify-between">
+<div class="p-2 rounded-lg bg-success/10 text-success">
+<span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+</div>
+<span class="inline-flex items-center gap-1 rounded-full bg-success/10 px-2 py-0.5 text-xs font-bold text-success">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> 5%
+                    </span>
+</div>
+<div class="mt-3">
+<p class="text-text-sub dark:text-gray-400 text-sm font-medium">Tổng thu</p>
+<p class="text-lg font-bold text-success truncate">50.000.000 ₫</p>
+</div>
+</div>
+<!-- Expense Card -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-border-light dark:border-border-dark">
+<div class="flex items-start justify-between">
+<div class="p-2 rounded-lg bg-danger/10 text-danger">
+<span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+</div>
+<span class="inline-flex items-center gap-1 rounded-full bg-success/10 px-2 py-0.5 text-xs font-bold text-success">
+<!-- Intentionally green because spending less is good, or red if spending increased. Context says -2%, implies decrease in expense which is good -->
+<span class="material-symbols-outlined text-[12px]">trending_down</span> 2%
+                    </span>
+</div>
+<div class="mt-3">
+<p class="text-text-sub dark:text-gray-400 text-sm font-medium">Tổng chi</p>
+<p class="text-lg font-bold text-danger truncate">12.500.000 ₫</p>
+</div>
+</div>
+<!-- Net Profit Card (Full Width) -->
+<div class="col-span-2 flex items-center justify-between rounded-xl bg-primary text-white p-5 shadow-lg shadow-primary/30 relative overflow-hidden group">
+<!-- Decorative background elements -->
+<div class="absolute right-0 top-0 h-32 w-32 translate-x-8 -translate-y-8 rounded-full bg-white/10 blur-2xl"></div>
+<div class="absolute left-0 bottom-0 h-24 w-24 -translate-x-4 translate-y-4 rounded-full bg-black/10 blur-xl"></div>
+<div class="relative z-10 flex flex-col gap-1">
+<p class="text-blue-100 text-sm font-medium">Chênh lệch (Lợi nhuận)</p>
+<p class="text-2xl font-bold tracking-tight">37.500.000 ₫</p>
+</div>
+<div class="relative z-10 flex flex-col items-end">
+<div class="flex items-center gap-1 text-blue-100 bg-white/20 px-2 py-1 rounded-lg backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-sm font-bold">+3%</span>
+</div>
+<p class="text-xs text-blue-200 mt-1">so với tháng trước</p>
+</div>
+</div>
+</div>
+<!-- AI Insights Panel -->
+<div class="px-4 mb-6">
+<div class="relative overflow-hidden rounded-xl border border-indigo-100 dark:border-indigo-900 bg-gradient-to-br from-indigo-50 to-white dark:from-[#1e2330] dark:to-[#1a202c] p-5 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-md shadow-indigo-200 dark:shadow-none">
+<span class="material-symbols-outlined icon-filled">auto_awesome</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<h3 class="text-base font-bold text-text-main dark:text-white">Trợ lý AI</h3>
+<span class="rounded-full bg-indigo-100 dark:bg-indigo-900/50 px-2 py-0.5 text-[10px] font-bold text-indigo-600 dark:text-indigo-300 uppercase tracking-wider">Mới</span>
+</div>
+<p class="text-text-sub dark:text-gray-300 text-sm leading-relaxed mb-3">
+                            Chi phí <span class="font-semibold text-text-main dark:text-white">điện</span> tăng cao hơn trung bình <span class="font-bold text-danger">15%</span> so với tháng trước. Hãy kiểm tra lại hóa đơn khu B.
+                        </p>
+<button class="inline-flex items-center justify-center gap-2 rounded-lg bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark px-4 py-2 text-sm font-medium text-primary dark:text-blue-400 shadow-sm hover:bg-gray-50 transition-colors w-full sm:w-auto">
+<span>Xem chi tiết</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="flex flex-col gap-6 px-4">
+<!-- Monthly Cashflow Chart -->
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-5 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-text-main dark:text-white text-base">Dòng tiền theo tháng</h3>
+<button class="text-text-sub dark:text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Bar Chart Implementation -->
+<div class="grid grid-cols-6 gap-2 sm:gap-4 items-end h-48 w-full">
+<!-- Column 1 -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end">
+<div class="relative w-full bg-gray-100 dark:bg-gray-700 rounded-t-sm h-[40%] group-hover:bg-gray-200 transition-all">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-sm h-[60%]"></div> <!-- Expense part -->
+</div>
+<span class="text-xs font-medium text-text-sub dark:text-gray-500">T5</span>
+</div>
+<!-- Column 2 -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end">
+<div class="relative w-full bg-gray-100 dark:bg-gray-700 rounded-t-sm h-[55%] group-hover:bg-gray-200 transition-all">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-sm h-[50%]"></div>
+</div>
+<span class="text-xs font-medium text-text-sub dark:text-gray-500">T6</span>
+</div>
+<!-- Column 3 -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end">
+<div class="relative w-full bg-primary rounded-t-sm h-[75%] shadow-lg shadow-primary/20 group-hover:brightness-110 transition-all">
+<!-- Show tooltip on hover via CSS or JS would go here, simplified visual only -->
+</div>
+<span class="text-xs font-bold text-primary dark:text-blue-400">T7</span>
+</div>
+<!-- Column 4 -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end">
+<div class="relative w-full bg-gray-100 dark:bg-gray-700 rounded-t-sm h-[60%] group-hover:bg-gray-200 transition-all">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-sm h-[70%]"></div>
+</div>
+<span class="text-xs font-medium text-text-sub dark:text-gray-500">T8</span>
+</div>
+<!-- Column 5 -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end">
+<div class="relative w-full bg-gray-100 dark:bg-gray-700 rounded-t-sm h-[85%] group-hover:bg-gray-200 transition-all">
+<div class="absolute bottom-0 w-full bg-primary/40 rounded-t-sm h-[40%]"></div>
+</div>
+<span class="text-xs font-medium text-text-sub dark:text-gray-500">T9</span>
+</div>
+<!-- Column 6 (Current) -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end">
+<div class="relative w-full bg-gray-100 dark:bg-gray-700 rounded-t-sm h-[65%] group-hover:bg-gray-200 transition-all">
+<div class="absolute bottom-0 w-full bg-primary/60 rounded-t-sm h-[50%] animate-pulse"></div>
+</div>
+<span class="text-xs font-bold text-text-main dark:text-white">T10</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex items-center justify-center gap-6 mt-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs text-text-sub dark:text-gray-400">Thu nhập</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary/40"></div>
+<span class="text-xs text-text-sub dark:text-gray-400">Chi tiêu</span>
+</div>
+</div>
+</div>
+<!-- Expense Structure (Pie/Donut Chart) -->
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-5 shadow-sm mb-6">
+<h3 class="font-bold text-text-main dark:text-white text-base mb-6">Cơ cấu chi phí</h3>
+<div class="flex flex-col sm:flex-row items-center gap-8">
+<!-- Donut Chart -->
+<div class="relative w-40 h-40 shrink-0">
+<!-- Conic gradient for donut chart visualization -->
+<div class="w-full h-full rounded-full" style="background: conic-gradient(#136dec 0% 45%, #e73908 45% 70%, #fbbf24 70% 100%);"></div>
+<!-- Inner circle to make it a donut -->
+<div class="absolute inset-0 m-auto w-28 h-28 rounded-full bg-surface-light dark:bg-surface-dark flex items-center justify-center flex-col">
+<span class="text-xs text-text-sub">Tổng chi</span>
+<span class="text-sm font-bold text-text-main dark:text-white">12.5tr ₫</span>
+</div>
+</div>
+<!-- Legend Items -->
+<div class="flex flex-col gap-3 w-full">
+<!-- Item 1 -->
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-sm bg-primary"></div>
+<span class="text-sm text-text-main dark:text-gray-300">Dịch vụ &amp; Bảo trì</span>
+</div>
+<span class="text-sm font-semibold text-text-main dark:text-white">45%</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-700 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 45%"></div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between w-full mt-1">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-sm bg-danger"></div>
+<span class="text-sm text-text-main dark:text-gray-300">Điện &amp; Nước</span>
+</div>
+<span class="text-sm font-semibold text-text-main dark:text-white">25%</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-700 h-1 rounded-full overflow-hidden">
+<div class="bg-danger h-full rounded-full" style="width: 25%"></div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between w-full mt-1">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-sm bg-yellow-400"></div>
+<span class="text-sm text-text-main dark:text-gray-300">Khác</span>
+</div>
+<span class="text-sm font-semibold text-text-main dark:text-white">30%</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-700 h-1 rounded-full overflow-hidden">
+<div class="bg-yellow-400 h-full rounded-full" style="width: 30%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Bottom Navigation (Simulated App Tab Bar) -->
+<nav class="fixed bottom-0 w-full max-w-[480px] bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-lg border-t border-border-light dark:border-border-dark pb-safe">
+<div class="flex justify-around items-center h-16">
+<a class="flex flex-col items-center justify-center w-full h-full text-text-sub hover:text-primary transition-colors gap-1" href="home.html">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-text-sub hover:text-primary transition-colors gap-1" href="rental-receivables.html">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+<span class="text-[10px] font-medium">Hóa đơn</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-primary gap-1 relative" href="dashboard.html">
+<div class="absolute -top-3 bg-primary/10 rounded-full p-2">
+<span class="material-symbols-outlined icon-filled text-[24px]">bar_chart</span>
+</div>
+<span class="text-[10px] font-bold mt-6">Báo cáo</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-text-sub hover:text-primary transition-colors gap-1" href="rental-tenants.html">
+<span class="material-symbols-outlined text-[24px]">group</span>
+<span class="text-[10px] font-medium">Khách thuê</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-text-sub hover:text-primary transition-colors gap-1" href="settings.html">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<span class="text-[10px] font-medium">Cài đặt</span>
+</a>
+</div>
+</nav>
+<!-- Safe area spacing for bottom nav -->
+<div class="h-6"></div>
+</div>
+</body></html>

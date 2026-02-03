@@ -1,142 +1,197 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Kakeibo Pro - Trang chủ</title>
-  <link rel="stylesheet" href="design-system.css">
-  <style>
-    /* Demo styles */
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tài chính &amp; Cho thuê</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "primary-dark": "#0b4eaf",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
   </style>
-</head>
-<body>
-  <div class="app">
-    <!-- Header -->
-    <div class="topbar">
-      <div class="topbar-back" style="visibility: hidden;">
-        <span>←</span>
-      </div>
-      <div class="topbar-title">Kakeibo Pro</div>
-      <div class="topbar-actions">
-        <button class="topbar-btn" aria-label="Profile">👤</button>
-      </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="app-content">
-      <!-- Thu Chi Module Card -->
-      <div class="module-card" onclick="alert('Navigate to Thu Chi')">
-        <div class="module-card-header">
-          <div class="module-card-title">
-            <span class="module-card-icon">💰</span>
-            <span>Thu Chi Gia Đình</span>
-          </div>
-          <span class="module-card-arrow">→</span>
-        </div>
-        <div class="module-card-stats">
-          <div class="module-card-stat">
-            <span class="module-card-label">Tháng này</span>
-            <span>
-              <span class="module-card-value income">+5.2tr</span>
-              <span class="module-card-value expense" style="margin-left: var(--space-2);">-3.8tr</span>
-            </span>
-          </div>
-          <div class="module-card-stat">
-            <span class="module-card-label">Tiết kiệm</span>
-            <span class="module-card-value income">1.4tr (27%)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Thuê Nhà Module Card -->
-      <div class="module-card mt-4" onclick="alert('Navigate to Thuê Nhà')">
-        <div class="module-card-header">
-          <div class="module-card-title">
-            <span class="module-card-icon">🏘️</span>
-            <span>Thuê Nhà</span>
-          </div>
-          <span class="module-card-arrow">→</span>
-        </div>
-        <div class="module-card-stats">
-          <div class="module-card-stat">
-            <span class="module-card-label">Đã thu</span>
-            <span class="module-card-value">12/15 phòng</span>
-          </div>
-          <div class="module-card-stat">
-            <span class="module-card-label">Chờ thu</span>
-            <span class="module-card-value income">10.5tr</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reminders Section -->
-      <div class="mt-4">
-        <h3 style="font-size: var(--text-lg); font-weight: var(--font-semibold); margin-bottom: var(--space-3);">
-          🔔 Nhắc việc (3)
-        </h3>
-        <div class="reminder-list">
-          <div class="reminder-item">
-            <span class="reminder-icon">💰</span>
-            <div class="reminder-content">
-              <div class="reminder-title">Thu tiền P101</div>
-              <div class="reminder-meta">Hôm nay • 3,500,000 ₫</div>
-            </div>
-            <div class="reminder-actions">
-              <button class="reminder-btn primary">Thu</button>
-            </div>
-          </div>
-          
-          <div class="reminder-item urgent">
-            <span class="reminder-icon">📄</span>
-            <div class="reminder-content">
-              <div class="reminder-title">HĐ P203 hết hạn</div>
-              <div class="reminder-meta">Còn 5 ngày • Nguyễn Văn B</div>
-            </div>
-            <div class="reminder-actions">
-              <button class="reminder-btn secondary">Xem</button>
-            </div>
-          </div>
-          
-          <div class="reminder-item">
-            <span class="reminder-icon">⚡</span>
-            <div class="reminder-content">
-              <div class="reminder-title">Thu tiền điện P105</div>
-              <div class="reminder-meta">Ngày mai • ~450,000 ₫</div>
-            </div>
-            <div class="reminder-actions">
-              <button class="reminder-btn secondary">Xem</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FAB -->
-    <button class="fab" onclick="alert('Open Quick Add')" aria-label="Thêm nhanh">+</button>
-
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <a href="#" class="bottom-nav-item active">
-        <span class="bottom-nav-item-icon">🏠</span>
-        <span>Trang chủ</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">💰</span>
-        <span>Thu Chi</span>
-      </a>
-      <a href="#" class="bottom-nav-item" style="position: relative;">
-        <span class="bottom-nav-item-icon" style="width: 48px; height: 48px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin-top: -16px; box-shadow: var(--shadow-md);">➕</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏘️</span>
-        <span>Thuê Nhà</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">⚙️</span>
-        <span>Cài đặt</span>
-      </a>
-    </nav>
-  </div>
-</body>
-</html>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl overflow-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile avatar of Nguyen Van A" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsOTuDVjkmtdbDbTSsDD3Zte4mFw28ldSffwh1ql-ciJubF3Ikr4h5ukl57fIk8uevxmTAhRW-40ecYzOTEDMJMpB807Izfy0yxMk-4Tg4WLBwSyhHpKLixD_nrSAIYLHJQ2tYHhPFgBJvH_pQGW9neK0d_9h1tmIRu-zxocC3250r0-2hUFnNCxlAa9d5NqotyVTy3u74hyF0JyhKNNjet6-1yNeMlcS-Ew4EpFMXJDX6DusB8ub1Rga9CkEBgAMtm7MLfhEAcas");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full border-2 border-white dark:border-background-dark"></div>
+</div>
+<div>
+<h1 class="text-sm text-gray-500 dark:text-gray-400 font-medium leading-none mb-1">Chào buổi sáng</h1>
+<h2 class="text-base font-bold leading-none text-[#111418] dark:text-white">Nguyễn Văn A</h2>
+</div>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-[#111418] dark:text-white">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 pb-24 overflow-y-auto">
+<!-- Hero Modules Grid -->
+<section class="p-4 pt-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">Tổng quan</h3>
+<span class="text-sm font-medium text-primary">Xem chi tiết</span>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Family Finance Card -->
+<div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-blue-600 p-5 shadow-lg shadow-blue-200 dark:shadow-none min-h-[160px] cursor-pointer hover:shadow-xl transition-all" onclick="location.href='dashboard.html'">
+<div class="absolute right-0 top-0 h-full w-1/2 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+<div class="relative z-10 flex justify-between items-start">
+<div class="bg-white/20 p-2 rounded-xl backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-[28px]">account_balance_wallet</span>
+</div>
+<span class="material-symbols-outlined text-white/80">arrow_forward</span>
+</div>
+<div class="relative z-10 mt-4">
+<p class="text-blue-100 font-medium text-sm mb-1">Thu Chi Gia Đình</p>
+<h4 class="text-white text-2xl font-bold">15.000.000đ</h4>
+<p class="text-blue-200 text-xs mt-1">Tổng dư tháng này</p>
+</div>
+</div>
+<!-- Rental Management Card -->
+<div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-5 shadow-md dark:shadow-none min-h-[160px] cursor-pointer hover:border-primary/50 transition-all" onclick="location.href='rental-units.html'">
+<div class="flex justify-between items-start">
+<div class="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-xl text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined text-[28px]">apartment</span>
+</div>
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold px-2 py-1 rounded-full">Đang hoạt động</span>
+</div>
+<div class="mt-4">
+<p class="text-gray-500 dark:text-gray-400 font-medium text-sm mb-1">Hoạch Toán Nhà Cho Thuê</p>
+<div class="flex items-end gap-2">
+<h4 class="text-[#111418] dark:text-white text-2xl font-bold">8/10</h4>
+<span class="text-gray-400 text-sm font-medium mb-1">phòng đã thuê</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-2 mt-3">
+<div class="bg-orange-500 h-2 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="px-4 py-2">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white mb-3">Thao tác nhanh</h3>
+<div class="flex gap-3">
+<button class="flex-1 flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-background-light dark:bg-gray-800 active:scale-95 transition-transform border border-transparent hover:border-primary/20" onclick="alert('Nhập Excel')">
+<div class="bg-green-100 dark:bg-green-900/20 p-2 rounded-full text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined">file_upload</span>
+</div>
+<span class="text-sm font-semibold text-[#111418] dark:text-white">Nhập Excel</span>
+</button>
+<button class="flex-1 flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-background-light dark:bg-gray-800 active:scale-95 transition-transform border border-transparent hover:border-primary/20" onclick="alert('Xuất Excel')">
+<div class="bg-blue-100 dark:bg-blue-900/20 p-2 rounded-full text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined">file_download</span>
+</div>
+<span class="text-sm font-semibold text-[#111418] dark:text-white">Xuất Excel</span>
+</button>
+</div>
+</section>
+<!-- Recent Activity List -->
+<section class="px-4 pt-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Giao dịch gần đây</h3>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm" onclick="location.href='transactions-list.html'">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-full bg-red-50 dark:bg-red-900/20 text-red-500">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white font-bold text-sm">Siêu thị VinMart</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs">Chi tiêu gia đình • 10:30 AM</p>
+</div>
+</div>
+<span class="text-red-500 font-bold text-sm">-500.000đ</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-full bg-green-50 dark:bg-green-900/20 text-green-500">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white font-bold text-sm">Tiền phòng P301</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs">Thu tiền nhà • Hôm qua</p>
+</div>
+</div>
+<span class="text-green-500 font-bold text-sm">+4.500.000đ</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-500">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white font-bold text-sm">Tiền nước tháng 5</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs">Hóa đơn • 20/05</p>
+</div>
+</div>
+<span class="text-red-500 font-bold text-sm">-250.000đ</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="absolute bottom-0 w-full bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 px-2 pb-5 pt-2 z-20">
+<div class="flex justify-around items-end">
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="home.html">
+<span class="material-symbols-outlined filled text-[26px]">home</span>
+<span class="text-[10px] font-bold">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors" href="transactions-list.html">
+<span class="material-symbols-outlined text-[26px]">receipt_long</span>
+<span class="text-[10px] font-medium">Giao dịch</span>
+</a>
+<div class="relative -top-5">
+<button class="flex items-center justify-center size-14 rounded-full bg-primary text-white shadow-lg shadow-blue-200 dark:shadow-blue-900/50 hover:bg-primary-dark transition-colors" onclick="location.href='quick-add.html'">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors" href="rental-units.html">
+<span class="material-symbols-outlined text-[26px]">apartment</span>
+<span class="text-[10px] font-medium">Nhà thuê</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined text-[26px]">bar_chart</span>
+<span class="text-[10px] font-medium">Báo cáo</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

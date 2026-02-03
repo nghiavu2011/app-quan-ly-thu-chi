@@ -1,217 +1,232 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Danh sách giao dịch</title>
-  <link rel="stylesheet" href="../design-system.css">
-</head>
-<body>
-  <div class="app">
-    <!-- Header -->
-    <div class="topbar">
-      <div class="topbar-back">
-        <span>←</span>
-        <span>Giao dịch</span>
-      </div>
-      <div class="topbar-actions">
-        <button class="topbar-btn" aria-label="Search">🔍</button>
-        <button class="topbar-btn" aria-label="Filter">📥</button>
-      </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="app-content">
-      <!-- Segment Control -->
-      <div class="toggle-group" style="margin-bottom: var(--space-4);">
-        <button class="toggle-btn active">Tất cả</button>
-        <button class="toggle-btn income">Thu</button>
-        <button class="toggle-btn expense">Chi</button>
-      </div>
-
-      <!-- Date Section: Hôm nay -->
-      <div class="divider-text" style="margin-bottom: var(--space-3);">
-        <span>Hôm nay, 03/02/2026</span>
-      </div>
-
-      <div class="transaction-item">
-        <div class="transaction-icon">☕</div>
-        <div class="transaction-content">
-          <div class="transaction-header">
-            <span class="transaction-title">Cafe Highlands</span>
-            <span class="transaction-amount expense">-65,000 ₫</span>
-          </div>
-          <div class="transaction-meta">
-            <span>Momo</span>
-            <span class="transaction-account">10:30</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="transaction-item">
-        <div class="transaction-icon">🍴</div>
-        <div class="transaction-content">
-          <div class="transaction-header">
-            <span class="transaction-title">Ăn trưa</span>
-            <span class="transaction-amount expense">-85,000 ₫</span>
-          </div>
-          <div class="transaction-meta">
-            <span>Cash</span>
-            <span class="transaction-account">12:15</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Date Section: Hôm qua -->
-      <div class="divider-text" style="margin: var(--space-4) 0 var(--space-3);">
-        <span>Hôm qua, 02/02/2026</span>
-      </div>
-
-      <div class="transaction-item">
-        <div class="transaction-icon" style="background: var(--color-success-light);">💼</div>
-        <div class="transaction-content">
-          <div class="transaction-header">
-            <span class="transaction-title">Lương tháng 2</span>
-            <span class="transaction-amount income">+15,000,000 ₫</span>
-          </div>
-          <div class="transaction-meta">
-            <span>Vietcombank</span>
-            <span class="transaction-account">09:00</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="transaction-item">
-        <div class="transaction-icon">🛒</div>
-        <div class="transaction-content">
-          <div class="transaction-header">
-            <span class="transaction-title">Mua sắm BigC</span>
-            <span class="transaction-amount expense">-450,000 ₫</span>
-          </div>
-          <div class="transaction-meta">
-            <span>Vietcombank</span>
-            <span class="transaction-account">18:30</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="transaction-item">
-        <div class="transaction-icon">🚗</div>
-        <div class="transaction-content">
-          <div class="transaction-header">
-            <span class="transaction-title">Đổ xăng</span>
-            <span class="transaction-amount expense">-200,000 ₫</span>
-          </div>
-          <div class="transaction-meta">
-            <span>ZaloPay</span>
-            <span class="transaction-account">19:00</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Load more indicator -->
-      <div style="text-align: center; padding: var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm);">
-        <div class="spinner" style="margin: 0 auto var(--space-3); width: 20px; height: 20px; border-width: 2px;"></div>
-        Đang tải thêm...
-      </div>
-    </div>
-
-    <!-- FAB -->
-    <button class="fab" aria-label="Thêm giao dịch">+</button>
-
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏠</span>
-        <span>Trang chủ</span>
-      </a>
-      <a href="#" class="bottom-nav-item active">
-        <span class="bottom-nav-item-icon">💰</span>
-        <span>Thu Chi</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏘️</span>
-        <span>Thuê Nhà</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">⚙️</span>
-        <span>Cài đặt</span>
-      </a>
-    </nav>
-  </div>
-
-  <!-- Filter Sheet (Bottom Sheet) - Hidden by default -->
-  <div class="bottom-sheet" style="display: none;">
-    <div class="bottom-sheet-handle"></div>
-    <div style="padding: var(--space-4);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
-        <h3 style="font-weight: var(--font-semibold);">Lọc giao dịch</h3>
-        <button style="background: none; border: none; font-size: 1.25rem; cursor: pointer;">✕</button>
-      </div>
-
-      <!-- Thời gian -->
-      <div class="filter-section">
-        <label class="filter-label">Thời gian</label>
-        <div class="filter-chips">
-          <button class="chip selected">7 ngày</button>
-          <button class="chip">30 ngày</button>
-          <button class="chip">Tháng này</button>
-          <button class="chip">Tùy chọn...</button>
-        </div>
-      </div>
-
-      <!-- Loại -->
-      <div class="filter-section">
-        <label class="filter-label">Loại</label>
-        <select>
-          <option>Tất cả</option>
-          <option>Thu</option>
-          <option>Chi</option>
-        </select>
-      </div>
-
-      <!-- Danh mục -->
-      <div class="filter-section">
-        <label class="filter-label">Danh mục</label>
-        <div class="filter-chips">
-          <button class="chip selected">🍴 Ăn uống</button>
-          <button class="chip selected">☕ Cafe</button>
-          <button class="chip">🚗 Xăng xe</button>
-          <button class="chip">🛒 Mua sắm</button>
-          <button class="chip">💼 Lương</button>
-          <button class="chip">🏠 Nhà cửa</button>
-        </div>
-      </div>
-
-      <!-- Tài khoản -->
-      <div class="filter-section">
-        <label class="filter-label">Tài khoản</label>
-        <select>
-          <option>Tất cả</option>
-          <option>Vietcombank</option>
-          <option>Momo</option>
-          <option>Cash</option>
-        </select>
-      </div>
-
-      <!-- Số tiền -->
-      <div class="filter-section">
-        <label class="filter-label">Số tiền</label>
-        <div class="filter-range">
-          <input type="number" placeholder="Min" style="flex: 1;">
-          <span class="filter-range-separator">─</span>
-          <input type="number" placeholder="Max" style="flex: 1;">
-        </div>
-      </div>
-
-      <!-- Actions -->
-      <div class="filter-actions">
-        <button class="btn btn-secondary">Đặt lại</button>
-        <button class="btn btn-primary">
-          Áp dụng <span class="filter-badge">15</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Danh sách Giao dịch</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                        "text-main": "#111418",
+                        "text-secondary": "#617289",
+                        "positive": "#10B981", // Green for income
+                        "negative": "#EF4444", // Red for expense
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Lexend", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal scrolls */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased overflow-x-hidden min-h-screen relative pb-20">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-20 bg-white dark:bg-[#1a2634] shadow-sm">
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="text-text-main dark:text-white flex size-12 shrink-0 items-center justify-start hover:opacity-70 transition-opacity" onclick="history.back()">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Danh sách Giao dịch</h2>
+</div>
+<!-- Search Bar -->
+<div class="px-4 pb-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm bg-[#f0f2f4] dark:bg-[#253345]">
+<div class="text-[#617289] dark:text-[#94a3b8] flex border-none items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-main dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-[#617289] dark:placeholder:text-[#94a3b8] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Tìm kiếm giao dịch..." value=""/>
+</div>
+</label>
+</div>
+<!-- Filter Chips (Horizontal Scroll) -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto no-scrollbar whitespace-nowrap border-b border-[#f0f2f4] dark:border-[#253345]">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white pl-4 pr-3 shadow-md active:scale-95 transition-transform">
+<p class="text-sm font-medium leading-normal">Tháng 10</p>
+<span class="material-symbols-outlined text-[20px]">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f0f2f4] dark:bg-[#253345] text-text-main dark:text-white pl-4 pr-3 border border-transparent dark:border-[#334155] active:bg-[#e0e2e4] dark:active:bg-[#1e293b] transition-colors">
+<p class="text-sm font-medium leading-normal">Tất cả thẻ</p>
+<span class="material-symbols-outlined text-[20px]">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f0f2f4] dark:bg-[#253345] text-text-main dark:text-white pl-4 pr-3 border border-transparent dark:border-[#334155] active:bg-[#e0e2e4] dark:active:bg-[#1e293b] transition-colors">
+<p class="text-sm font-medium leading-normal">Tất cả tài khoản</p>
+<span class="material-symbols-outlined text-[20px]">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f0f2f4] dark:bg-[#253345] text-text-main dark:text-white pl-4 pr-3 border border-transparent dark:border-[#334155] active:bg-[#e0e2e4] dark:active:bg-[#1e293b] transition-colors">
+<p class="text-sm font-medium leading-normal">Loại GD</p>
+<span class="material-symbols-outlined text-[20px]">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+<!-- Main Content List -->
+<div class="flex flex-col pb-4">
+<!-- Group: Hôm nay -->
+<div class="sticky top-[168px] z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 py-3 border-b border-gray-100 dark:border-gray-800">
+<div class="flex justify-between items-end">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Hôm nay</h3>
+<span class="text-xs font-medium text-text-secondary dark:text-gray-400 mb-0.5">Thứ Ba, 24/10</span>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] mx-4 mt-2 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
+<!-- Item 1: Income -->
+<div class="flex items-center gap-4 p-4 justify-between border-b border-gray-50 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#253345] transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="text-primary bg-primary/10 flex items-center justify-center rounded-xl shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">real_estate_agent</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main dark:text-white text-base font-semibold leading-normal line-clamp-1">Thu tiền phòng 101</p>
+<div class="flex items-center gap-2 mt-0.5">
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">Vietcombank</p>
+<span class="text-text-secondary dark:text-gray-600 text-[10px]">•</span>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">14:30</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<p class="text-positive font-bold text-base leading-normal">+3.500.000 đ</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                        Thu
+                    </span>
+</div>
+</div>
+<!-- Item 2: Expense -->
+<div class="flex items-center gap-4 p-4 justify-between hover:bg-gray-50 dark:hover:bg-[#253345] transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="text-[#EF4444] bg-red-50 dark:bg-red-900/20 flex items-center justify-center rounded-xl shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">construction</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main dark:text-white text-base font-semibold leading-normal line-clamp-1">Mua vật tư sửa chữa</p>
+<div class="flex items-center gap-2 mt-0.5">
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">Tiền mặt</p>
+<span class="text-text-secondary dark:text-gray-600 text-[10px]">•</span>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">09:15</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<p class="text-negative font-bold text-base leading-normal">-200.000 đ</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400">
+                        Chi phí
+                    </span>
+</div>
+</div>
+</div>
+<!-- Group: Hôm qua -->
+<div class="sticky top-[168px] z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 py-3 mt-2 border-b border-gray-100 dark:border-gray-800">
+<div class="flex justify-between items-end">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Hôm qua</h3>
+<span class="text-xs font-medium text-text-secondary dark:text-gray-400 mb-0.5">Thứ Hai, 23/10</span>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2634] mx-4 mt-2 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
+<!-- Item 3: Expense -->
+<div class="flex items-center gap-4 p-4 justify-between border-b border-gray-50 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#253345] transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="text-[#F59E0B] bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center rounded-xl shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">wifi</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main dark:text-white text-base font-semibold leading-normal line-clamp-1">Trả tiền internet</p>
+<div class="flex items-center gap-2 mt-0.5">
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">Momo</p>
+<span class="text-text-secondary dark:text-gray-600 text-[10px]">•</span>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">18:45</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<p class="text-negative font-bold text-base leading-normal">-350.000 đ</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                        Dịch vụ
+                    </span>
+</div>
+</div>
+<!-- Item 4: Expense -->
+<div class="flex items-center gap-4 p-4 justify-between border-b border-gray-50 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#253345] transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="text-[#8B5CF6] bg-violet-50 dark:bg-violet-900/20 flex items-center justify-center rounded-xl shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main dark:text-white text-base font-semibold leading-normal line-clamp-1">Siêu thị BigC</p>
+<div class="flex items-center gap-2 mt-0.5">
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">VIB Credit</p>
+<span class="text-text-secondary dark:text-gray-600 text-[10px]">•</span>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">12:20</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<p class="text-negative font-bold text-base leading-normal">-1.200.000 đ</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+                        Sinh hoạt
+                    </span>
+</div>
+</div>
+<!-- Item 5: Income -->
+<div class="flex items-center gap-4 p-4 justify-between hover:bg-gray-50 dark:hover:bg-[#253345] transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="text-primary bg-primary/10 flex items-center justify-center rounded-xl shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">savings</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-main dark:text-white text-base font-semibold leading-normal line-clamp-1">Lãi tiết kiệm</p>
+<div class="flex items-center gap-2 mt-0.5">
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">TPBank</p>
+<span class="text-text-secondary dark:text-gray-600 text-[10px]">•</span>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">08:00</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<p class="text-positive font-bold text-base leading-normal">+450.000 đ</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                        Đầu tư
+                    </span>
+</div>
+</div>
+</div>
+<!-- Summary Footer Section (Optional visual hint for end of list) -->
+<div class="py-8 flex flex-col items-center justify-center text-text-secondary dark:text-gray-500 gap-2">
+<span class="material-symbols-outlined text-4xl opacity-20">receipt_long</span>
+<p class="text-sm">Đã hiển thị hết giao dịch</p>
+</div>
+</div>
+<!-- Floating Action Button -->
+<div class="fixed bottom-6 right-6 z-30">
+<button class="flex items-center justify-center size-14 rounded-full bg-primary text-white shadow-lg shadow-blue-500/30 hover:bg-blue-600 hover:scale-105 active:scale-95 transition-all" onclick="location.href='quick-add.html'">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+</div>
+</body></html>

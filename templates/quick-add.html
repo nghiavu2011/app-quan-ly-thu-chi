@@ -1,120 +1,163 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Quick Add - Thêm giao dịch</title>
-  <link rel="stylesheet" href="../design-system.css">
-</head>
-<body>
-  <!-- Bottom Sheet Overlay -->
-  <div class="bottom-sheet-overlay" onclick="alert('Close bottom sheet')"></div>
-  
-  <!-- Quick Add Bottom Sheet -->
-  <div class="bottom-sheet" style="max-height: 85vh;">
-    <!-- Handle Bar -->
-    <div class="bottom-sheet-handle"></div>
-    
-    <div style="padding: 0 var(--space-4) var(--space-4);">
-      <!-- Thu/Chi Toggle -->
-      <div class="switch" style="margin-bottom: var(--space-4); justify-content: center;">
-        <span class="switch-option income">THU</span>
-        <span class="switch-option expense active">CHI</span>
-      </div>
-      
-      <!-- Amount Display -->
-      <div class="amount-display" style="font-size: 2.5rem; margin-bottom: var(--space-4);">
-        500,000 <span class="amount-display-currency">₫</span>
-      </div>
-      
-      <!-- Category Chips -->
-      <div class="chip-group" style="margin-bottom: var(--space-4); overflow-x: auto; flex-wrap: nowrap; padding-bottom: var(--space-2);">
-        <button class="chip selected">
-          <span class="chip-icon">☕</span>
-          <span>Cafe</span>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thêm giao dịch nhanh</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101822",
+                        "surface-light": "#f3f4f6",
+                        "surface-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Keypad press effect */
+        .keypad-btn:active {
+            transform: scale(0.95);
+            background-color: rgba(0,0,0,0.05);
+        }
+        .dark .keypad-btn:active {
+            background-color: rgba(255,255,255,0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display min-h-screen flex flex-col overflow-hidden selection:bg-primary/30">
+<!-- Header -->
+<header class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-background-dark shrink-0 z-10">
+<button class="text-[#617289] dark:text-gray-400 text-base font-medium p-2 -ml-2 hover:bg-surface-light dark:hover:bg-surface-dark rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20" onclick="history.back()">
+            Hủy
         </button>
-        <button class="chip">
-          <span class="chip-icon">🍴</span>
-          <span>Ăn uống</span>
-        </button>
-        <button class="chip">
-          <span class="chip-icon">🚗</span>
-          <span>Xăng xe</span>
-        </button>
-        <button class="chip">
-          <span class="chip-icon">🛒</span>
-          <span>Mua sắm</span>
-        </button>
-        <button class="chip">
-          <span class="chip-icon">💡</span>
-          <span>Điện</span>
-        </button>
-        <button class="chip">
-          <span class="chip-icon">📱</span>
-          <span>Điện thoại</span>
-        </button>
-      </div>
-      
-      <!-- Account & Date -->
-      <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
-        <div class="date-field" style="flex: 1;">
-          <span class="date-field-icon">💳</span>
-          <span class="date-field-value">Vietcombank ▼</span>
-        </div>
-        <div class="date-field" style="flex: 1;">
-          <span class="date-field-icon">📅</span>
-          <span class="date-field-value">Hôm nay ▼</span>
-        </div>
-      </div>
-      
-      <!-- Note Input -->
-      <input type="text" placeholder="📝 Ghi chú (tùy chọn)" style="margin-bottom: var(--space-4);">
-      
-      <!-- Action Buttons -->
-      <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
-        <button class="btn btn-secondary" style="flex: 1;">
-          <span>🎤</span>
-          <span>Voice</span>
-        </button>
-        <button class="btn btn-primary btn-lg" style="flex: 2;">
-          <span>✓</span>
-          <span>Lưu - 500k</span>
-        </button>
-      </div>
-      
-      <!-- Number Keypad -->
-      <div class="keypad">
-        <button class="keypad-btn">1</button>
-        <button class="keypad-btn">2</button>
-        <button class="keypad-btn">3</button>
-        <button class="keypad-btn" style="font-size: 1.2rem;">⌫</button>
-        
-        <button class="keypad-btn">4</button>
-        <button class="keypad-btn">5</button>
-        <button class="keypad-btn">6</button>
-        <button class="keypad-btn helper">
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <span style="font-size: var(--text-base);">k</span>
-            <span style="font-size: 10px;">000</span>
-          </div>
-        </button>
-        
-        <button class="keypad-btn">7</button>
-        <button class="keypad-btn">8</button>
-        <button class="keypad-btn">9</button>
-        <button class="keypad-btn helper">
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <span style="font-size: var(--text-base);">tr</span>
-            <span style="font-size: 10px;">000000</span>
-          </div>
-        </button>
-        
-        <button class="keypad-btn">,</button>
-        <button class="keypad-btn">0</button>
-        <button class="keypad-btn">00</button>
-        <button class="keypad-btn primary">✓</button>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em]">Thêm giao dịch</h1>
+<div class="w-10"></div> <!-- Spacer for visual balance -->
+</header>
+<!-- Toggle Income/Expense -->
+<div class="px-6 py-2 shrink-0">
+<div class="flex h-12 w-full items-center justify-center rounded-xl bg-surface-light dark:bg-surface-dark p-1">
+<label class="flex-1 cursor-pointer h-full flex items-center justify-center rounded-lg transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-[#2C3E50] has-[:checked]:shadow-[0_2px_8px_rgba(0,0,0,0.08)] has-[:checked]:text-[#111418] dark:has-[:checked]:text-white text-[#617289] dark:text-gray-400 font-medium">
+<span class="text-sm font-semibold">Chi tiền</span>
+<input checked="" class="hidden" name="transaction_type" type="radio" value="expense"/>
+</label>
+<label class="flex-1 cursor-pointer h-full flex items-center justify-center rounded-lg transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-[#2C3E50] has-[:checked]:shadow-[0_2px_8px_rgba(0,0,0,0.08)] has-[:checked]:text-primary dark:has-[:checked]:text-primary text-[#617289] dark:text-gray-400 font-medium">
+<span class="text-sm font-semibold">Thu tiền</span>
+<input class="hidden" name="transaction_type" type="radio" value="income"/>
+</label>
+</div>
+</div>
+<!-- Main Input Area -->
+<div class="flex-1 flex flex-col px-4 pt-2 pb-2">
+<!-- Amount Display -->
+<div class="flex flex-col items-center justify-center py-4 sm:py-6 shrink-0 relative">
+<div class="flex items-baseline gap-1 animate-[pulse_3s_ease-in-out_infinite]">
+<span class="text-[48px] sm:text-[56px] font-bold tracking-tight text-primary leading-none">150.000</span>
+<span class="text-2xl font-medium text-gray-400 dark:text-gray-500">đ</span>
+</div>
+<!-- Subtext/Hint -->
+<p class="text-sm text-gray-400 mt-2 dark:text-gray-500 font-medium">Nhập số tiền</p>
+</div>
+<!-- Middle Controls: Account & Mic -->
+<div class="flex items-center justify-between gap-3 mb-4 shrink-0 mt-2">
+<!-- Account Selector -->
+<button class="flex items-center gap-3 bg-surface-light dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 rounded-xl px-4 py-3 flex-1 transition-colors group border border-transparent focus:border-primary/30 outline-none">
+<div class="w-10 h-10 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center shadow-sm text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">payments</span>
+</div>
+<div class="flex flex-col items-start">
+<span class="text-[11px] uppercase tracking-wide text-gray-500 dark:text-gray-400 font-semibold">Nguồn tiền</span>
+<span class="text-base font-bold text-[#111418] dark:text-white">Tiền mặt</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 ml-auto group-hover:text-primary transition-colors">expand_more</span>
+</button>
+<!-- Voice Input Button -->
+<button aria-label="Voice Input" class="flex items-center justify-center w-[72px] h-[72px] rounded-xl bg-primary/10 text-primary hover:bg-primary/20 hover:scale-105 dark:bg-primary/20 dark:text-primary-light transition-all active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50" onclick="location.href='voice-input.html'">
+<span class="material-symbols-outlined text-[32px]">mic</span>
+</button>
+</div>
+<!-- Chips (Quick Categories) -->
+<div class="mb-2 shrink-0">
+<div class="flex items-center justify-between mb-2 px-1">
+<p class="text-sm font-semibold text-gray-500 dark:text-gray-400">Danh mục nhanh</p>
+<button class="text-xs font-medium text-primary hover:underline">Xem tất cả</button>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2 mask-linear-fade">
+<!-- Selected Chip -->
+<button class="flex items-center gap-2 rounded-lg bg-primary text-white shadow-md shadow-primary/20 px-4 py-2.5 shrink-0 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[20px] fill-current">restaurant</span>
+<span class="text-sm font-semibold whitespace-nowrap">Ăn uống</span>
+</button>
+<!-- Unselected Chips -->
+<button class="flex items-center gap-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-[#111418] dark:text-white px-4 py-2.5 shrink-0 transition-colors border border-transparent active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-blue-500">directions_car</span>
+<span class="text-sm font-medium whitespace-nowrap">Di chuyển</span>
+</button>
+<button class="flex items-center gap-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-[#111418] dark:text-white px-4 py-2.5 shrink-0 transition-colors border border-transparent active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-purple-500">home</span>
+<span class="text-sm font-medium whitespace-nowrap">Tiền nhà</span>
+</button>
+<button class="flex items-center gap-2 rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-[#111418] dark:text-white px-4 py-2.5 shrink-0 transition-colors border border-transparent active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-red-500">receipt_long</span>
+<span class="text-sm font-medium whitespace-nowrap">Hóa đơn</span>
+</button>
+<button class="flex items-center justify-center rounded-lg bg-surface-light dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 px-3 py-2.5 shrink-0 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[20px] text-gray-500">add</span>
+</button>
+</div>
+</div>
+<!-- Keypad & Save Container -->
+<!-- Using mt-auto to push to bottom, rounded top corners for sheet effect -->
+<div class="mt-auto bg-surface-light/30 dark:bg-surface-dark/30 rounded-t-3xl border-t border-gray-100 dark:border-gray-800 -mx-4 px-4 pt-4 pb-6 backdrop-blur-sm">
+<div class="grid grid-cols-3 gap-3 mb-4">
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">1</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">2</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">3</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">4</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">5</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">6</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">7</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">8</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">9</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[20px] font-semibold text-[#111418] dark:text-white flex items-center justify-center transition-all select-none tracking-widest">000</button>
+<button class="keypad-btn h-14 rounded-2xl bg-white dark:bg-[#2C3E50] shadow-[0_2px_0_rgba(0,0,0,0.05)] text-[26px] font-medium text-[#111418] dark:text-white flex items-center justify-center transition-all select-none">0</button>
+<button class="keypad-btn h-14 rounded-2xl bg-transparent dark:text-white flex items-center justify-center transition-transform select-none group">
+<span class="material-symbols-outlined text-[32px] text-gray-400 group-hover:text-gray-600 dark:group-hover:text-white transition-colors">backspace</span>
+</button>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-[17px] font-bold py-4 rounded-xl shadow-lg shadow-primary/30 active:scale-[0.98] transition-all flex items-center justify-center gap-2" onclick="alert('Đã lưu giao dịch!'); location.href='home.html'">
+<span>Lưu giao dịch</span>
+<span class="material-symbols-outlined text-xl">check</span>
+</button>
+</div>
+</div>
+</body></html>

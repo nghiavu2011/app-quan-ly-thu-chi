@@ -1,179 +1,244 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Quản lý phòng - Thuê Nhà</title>
-  <link rel="stylesheet" href="../design-system.css">
-</head>
-<body>
-  <div class="app">
-    <!-- Header -->
-    <div class="topbar">
-      <div class="topbar-back">
-        <span>←</span>
-        <span>Quản lý phòng</span>
-      </div>
-      <div class="topbar-actions">
-        <button class="topbar-btn" style="font-size: var(--text-sm); width: auto; padding: 0 var(--space-3); background: var(--color-primary); color: white; border-radius: var(--radius-md);">
-          <span>+</span>
-          <span style="margin-left: var(--space-1);">Thêm</span>
-        </button>
-      </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="app-content">
-      <!-- Filter Tabs -->
-      <div class="toggle-group" style="margin-bottom: var(--space-4);">
-        <button class="toggle-btn active">Tất cả</button>
-        <button class="toggle-btn">Đang thuê</button>
-        <button class="toggle-btn">Trống</button>
-        <button class="toggle-btn">Sửa</button>
-      </div>
-
-      <!-- Unit Card: Đang thuê -->
-      <div class="unit-card rented">
-        <div class="unit-card-header">
-          <div>
-            <div class="unit-card-name">🏠 Phòng 101</div>
-            <div style="margin-top: var(--space-1);">
-              <span class="badge badge-success">
-                <span class="badge-dot"></span>
-                <span>Đang thuê</span>
-              </span>
-            </div>
-          </div>
-          <button class="topbar-btn" style="color: var(--color-text-muted);">⋯</button>
-        </div>
-        <div class="unit-card-info">
-          <div class="unit-card-tenant">👤 Nguyễn Văn A • 0912xxx456</div>
-          <div class="unit-card-rent">💰 3,500,000 ₫/tháng</div>
-          <div class="unit-card-contract">📄 HĐ đến: 01/07/2026</div>
-        </div>
-        <div class="unit-card-actions">
-          <button class="btn btn-ghost btn-sm" style="flex: 1;">
-            <span>📞</span>
-            <span>Gọi</span>
-          </button>
-          <button class="btn btn-primary btn-sm" style="flex: 1;">
-            <span>💰</span>
-            <span>Thu tiền</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Unit Card: Trống -->
-      <div class="unit-card available" style="margin-top: var(--space-3);">
-        <div class="unit-card-header">
-          <div>
-            <div class="unit-card-name">🏠 Phòng 102</div>
-            <div style="margin-top: var(--space-1);">
-              <span class="badge badge-neutral">
-                <span class="badge-dot"></span>
-                <span>Trống</span>
-              </span>
-            </div>
-          </div>
-          <button class="topbar-btn" style="color: var(--color-text-muted);">⋯</button>
-        </div>
-        <div class="unit-card-info">
-          <div class="unit-card-tenant" style="color: var(--color-text-muted);">Chưa có người thuê</div>
-          <div class="unit-card-rent">💰 3,200,000 ₫/tháng</div>
-        </div>
-        <div class="unit-card-actions">
-          <button class="btn btn-primary btn-sm" style="flex: 1;">
-            <span>👤</span>
-            <span>Thêm người thuê</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Unit Card: Bảo trì -->
-      <div class="unit-card maintenance" style="margin-top: var(--space-3);">
-        <div class="unit-card-header">
-          <div>
-            <div class="unit-card-name">🏠 Phòng 103</div>
-            <div style="margin-top: var(--space-1);">
-              <span class="badge badge-warning">
-                <span class="badge-dot"></span>
-                <span>Bảo trì</span>
-              </span>
-            </div>
-          </div>
-          <button class="topbar-btn" style="color: var(--color-text-muted);">⋯</button>
-        </div>
-        <div class="unit-card-info">
-          <div class="unit-card-tenant">🔧 Đang sửa điều hòa</div>
-          <div class="unit-card-rent">💰 2,800,000 ₫/tháng</div>
-          <div class="unit-card-contract">📅 Dự kiến xong: 05/02/2026</div>
-        </div>
-        <div class="unit-card-actions">
-          <button class="btn btn-ghost btn-sm" style="flex: 1;">
-            <span>📋</span>
-            <span>Cập nhật</span>
-          </button>
-          <button class="btn btn-primary btn-sm" style="flex: 1;">
-            <span>✓</span>
-            <span>Hoàn thành</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Unit Card: Đang thuê (2) -->
-      <div class="unit-card rented" style="margin-top: var(--space-3);">
-        <div class="unit-card-header">
-          <div>
-            <div class="unit-card-name">🏠 Phòng 201</div>
-            <div style="margin-top: var(--space-1);">
-              <span class="badge badge-success">
-                <span class="badge-dot"></span>
-                <span>Đang thuê</span>
-              </span>
-            </div>
-          </div>
-          <button class="topbar-btn" style="color: var(--color-text-muted);">⋯</button>
-        </div>
-        <div class="unit-card-info">
-          <div class="unit-card-tenant">👤 Trần Thị B • 0987xxx321</div>
-          <div class="unit-card-rent">💰 4,000,000 ₫/tháng</div>
-          <div class="unit-card-contract">📄 HĐ đến: 15/09/2026</div>
-        </div>
-        <div class="unit-card-actions">
-          <button class="btn btn-ghost btn-sm" style="flex: 1;">
-            <span>📞</span>
-            <span>Gọi</span>
-          </button>
-          <button class="btn btn-primary btn-sm" style="flex: 1;">
-            <span>💰</span>
-            <span>Thu tiền</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- FAB -->
-    <button class="fab" aria-label="Thêm phòng">+</button>
-
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏠</span>
-        <span>Trang chủ</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">💰</span>
-        <span>Thu Chi</span>
-      </a>
-      <a href="#" class="bottom-nav-item active">
-        <span class="bottom-nav-item-icon">🏘️</span>
-        <span>Thuê Nhà</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">⚙️</span>
-        <span>Cài đặt</span>
-      </a>
-    </nav>
-  </div>
-</body>
-</html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quản lý Phòng cho thuê</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-40 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800 transition-colors duration-200">
+<div class="flex items-center justify-between px-4 py-3">
+<h1 class="text-xl font-bold leading-tight tracking-tight flex-1">Danh sách phòng</h1>
+<div class="flex items-center justify-end gap-3">
+<button class="flex items-center justify-center rounded-full w-10 h-10 bg-transparent text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex items-center justify-center rounded-full w-10 h-10 bg-transparent text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Status Filter Tabs (Horizontal Scroll) -->
+<div class="flex overflow-x-auto px-4 pb-3 gap-2 no-scrollbar">
+<button class="whitespace-nowrap rounded-full bg-[#111418] dark:bg-white text-white dark:text-[#111418] px-4 py-1.5 text-sm font-medium">
+                Tất cả (12)
+            </button>
+<button class="whitespace-nowrap rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-4 py-1.5 text-sm font-medium">
+                Đang thuê (10)
+            </button>
+<button class="whitespace-nowrap rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-4 py-1.5 text-sm font-medium">
+                Trống (2)
+            </button>
+<button class="whitespace-nowrap rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-4 py-1.5 text-sm font-medium">
+                Sắp hết hạn (1)
+            </button>
+</div>
+</header>
+<!-- Main Content List -->
+<main class="flex-1 px-4 py-4 pb-24 flex flex-col gap-4">
+<!-- Card 1: Occupied -->
+<article class="flex flex-col bg-white dark:bg-[#1a2634] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-lg w-16 h-16 shrink-0 bg-gray-200" data-alt="Small modern apartment interior with cozy lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGSASijZG9OvN86zjimlR_5oG3_5DjpD6Xznl2wrSQ-W809wtv4nzg68zlUlshEY5jsqwuQ01eH-e-mjV5BQNTisentEASRTf9laIQgtjoEEhyFrEkXfXU06pjpIY3Mkvqd4OgC54tjZcMTi5ngK6rrxjnU_E69E8QsLLrM3CGk7KxVjInbeyRPotquP0cwYThAT9j_vP7UjtjAcdsFvDCS6eFcDPrDBHyOs5UACQ0LQnQ-dItMtnnzienU6g8IsRguuFrrDeRpww");'></div>
+<div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Phòng 101</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Tầng 1</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1.5"></span>
+                        Đang thuê
+                    </span>
+</div>
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Giá thuê</p>
+<p class="text-lg font-bold text-[#111418] dark:text-white">4.500.000 đ<span class="text-sm font-normal text-gray-500 dark:text-gray-400">/tháng</span></p>
+</div>
+<div class="text-right">
+<p class="text-xs text-gray-500 dark:text-gray-400">Người thuê: Nguyễn Văn A</p>
+</div>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-10 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-[#111418] dark:text-white gap-2 px-4 text-sm font-bold transition-colors" onclick="location.href='quick-add.html'">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Thêm giao dịch</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Vacant -->
+<article class="flex flex-col bg-white dark:bg-[#1a2634] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-lg w-16 h-16 shrink-0 bg-gray-200 grayscale" data-alt="Empty clean room with window" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8gozUkJ55yKIJ9fZusWGrkNm-jHElb-lUaXAQFQDxQtLXBusqpIUN0hMRpagHJQINtLEk5a4k16xKHt7vONOMZBh_zYukx-zXhzNQ9TQqLCPziCx9vG7bLV_7yO9K_yaVKfcpqE0kmo_MqNAeGFism6TEV44SgL6eWnCGlCLOMsQk3aVhToFC-wLRxMD-i6UFVr6B7kymlbh5j1_AZ1XRqnWRWPJAzfrWwoYKvSqShNZvFE7uXLuasM5TORjmxzVCwh7aSB1Xx1I");'></div>
+<div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Phòng 102</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Tầng 1</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300">
+<span class="w-1.5 h-1.5 rounded-full bg-gray-400 mr-1.5"></span>
+                        Trống
+                    </span>
+</div>
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Giá thuê dự kiến</p>
+<p class="text-lg font-bold text-[#111418] dark:text-white">4.800.000 đ<span class="text-sm font-normal text-gray-500 dark:text-gray-400">/tháng</span></p>
+</div>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-10 bg-primary/10 hover:bg-primary/20 text-primary dark:text-blue-300 gap-2 px-4 text-sm font-bold transition-colors border border-primary/20" onclick="alert('Tạo hợp đồng')">
+<span class="material-symbols-outlined text-[20px]">contract_edit</span>
+<span>Tạo hợp đồng</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Occupied -->
+<article class="flex flex-col bg-white dark:bg-[#1a2634] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-lg w-16 h-16 shrink-0 bg-gray-200" data-alt="Studio apartment with plants" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDko5fFB2o1cUwhwU-OuaOqnR3uoQzwDJiNY06yKdbJejhcDiyoFy7_ws5YzwqAhMhFbLo3xiIA3xEPMb5YMFf3zVcl60aT5obqfP230Jz2N2IAX2HMcRBbBXDrkK8WuK08limFDyRs0v9za1UZknztujobzNo0REILtXlzUqK-Ir7611W-EpJeVmuw3208Tm1xNXgY3qTvKlWsTHm1J6q3lwRzIooWJZT3l8C-lL32CIBCmfyNZjsE4LLulb4A7muRWkv19x6duVU");'></div>
+<div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Phòng 201</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Tầng 2 - Có ban công</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1.5"></span>
+                        Đang thuê
+                    </span>
+</div>
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Giá thuê</p>
+<p class="text-lg font-bold text-[#111418] dark:text-white">5.200.000 đ<span class="text-sm font-normal text-gray-500 dark:text-gray-400">/tháng</span></p>
+</div>
+<div class="text-right">
+<p class="text-xs text-gray-500 dark:text-gray-400">Hạn: 15/12/2023</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-[#111418] dark:text-white gap-2 px-2 text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="truncate">Hóa đơn</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-[#111418] dark:text-white gap-2 px-2 text-sm font-bold transition-colors" onclick="location.href='quick-add.html'">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="truncate">Thu chi</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Occupied (Simple) -->
+<article class="flex flex-col bg-white dark:bg-[#1a2634] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-lg w-16 h-16 shrink-0 bg-gray-200" data-alt="Simple bedroom with white sheets" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBvIu_1wHJT-Oy3log2G_WTYvGzOjtE6JhGersWkA0OsV_78ftK1md7vkpGUfcydwC37ZrkgcGNHkEhYfsqRcN2zQEj43w80y_4JfYSSp9rLZgQ7-GCCEvv6InBcw94ejgHCMnQugwYiRk7CBMeZj700AX2TmGNdeYzpRkr2MhXsVG-j7y-A0I45U4ooNpPLgh6d9OJsdBZZcm3lftAINI2GSXw-gvDqHIpv1_Cc4WBUyXcok9WlybKjdWdI8-MqWUgg1sDEAEePQ");'></div>
+<div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white leading-tight">Phòng 202</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Tầng 2</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1.5"></span>
+                        Đang thuê
+                    </span>
+</div>
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Giá thuê</p>
+<p class="text-lg font-bold text-[#111418] dark:text-white">5.000.000 đ<span class="text-sm font-normal text-gray-500 dark:text-gray-400">/tháng</span></p>
+</div>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-10 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-[#111418] dark:text-white gap-2 px-4 text-sm font-bold transition-colors" onclick="location.href='quick-add.html'">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Thêm giao dịch</span>
+</button>
+</div>
+</article>
+</main>
+<!-- FAB -->
+<div class="fixed bottom-[88px] right-4 z-30">
+<button class="flex items-center justify-center rounded-2xl h-14 w-14 shadow-lg shadow-blue-500/30 bg-primary hover:bg-blue-600 text-white transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-white dark:bg-[#1a2634] border-t border-gray-100 dark:border-gray-800 z-50 pb-safe">
+<div class="grid grid-cols-4 h-16 items-center">
+<a class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors" href="home.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Tổng quan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="rental-units.html">
+<span class="material-symbols-outlined fill-current">apartment</span>
+<span class="text-[10px] font-bold">Phòng</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors" href="rental-tenants.html">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Người thuê</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors" href="settings.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Cài đặt</span>
+</a>
+</div>
+<!-- Safe Area Spacer for iOS Home Indicator -->
+<div class="h-[env(safe-area-inset-bottom)]"></div>
+</nav>
+<!-- Background overlay for depth effect -->
+<div class="fixed inset-0 bg-background-light dark:bg-background-dark -z-10"></div>
+</body></html>

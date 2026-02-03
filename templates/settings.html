@@ -1,183 +1,217 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Cài đặt</title>
-  <link rel="stylesheet" href="../design-system.css">
-</head>
-<body>
-  <div class="app">
-    <!-- Header -->
-    <div class="topbar">
-      <div class="topbar-back" style="visibility: hidden;">
-        <span>←</span>
-      </div>
-      <div class="topbar-title">Cài đặt</div>
-      <div class="topbar-actions">
-        <button class="topbar-btn" aria-label="Profile">👤</button>
-      </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="app-content">
-      <!-- Settings List -->
-      <div class="card" style="padding: 0; overflow: hidden;">
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">📂</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Danh mục & Tags</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-        
-        <div class="divider" style="margin: 0;"></div>
-        
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">💳</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Tài khoản & Ví</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-      </div>
-
-      <!-- Import/Export Section -->
-      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">📥</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Import từ Excel</div>
-            <div class="list-item-subtitle">Nhập dữ liệu từ file Excel có sẵn</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-        
-        <div class="divider" style="margin: 0;"></div>
-        
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">📤</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Export ra Excel</div>
-            <div class="list-item-subtitle">Xuất dữ liệu ra file Excel để backup</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-      </div>
-
-      <!-- Backup & Sync -->
-      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">☁️</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Backup & Đồng bộ</div>
-            <div class="list-item-subtitle">Lần cuối: 02/02/2026 14:30</div>
-          </div>
-          <span class="list-item-value" style="font-size: var(--text-sm); color: var(--color-success);">✓ Đã bật</span>
-        </div>
-      </div>
-
-      <!-- Voice Settings -->
-      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">🎤</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Cài đặt giọng nói</div>
-            <div class="list-item-subtitle">Tiếng Việt • Nhận dạng nhanh</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-      </div>
-
-      <!-- Security -->
-      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">🔒</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Bảo mật</div>
-            <div class="list-item-subtitle">PIN • Face ID</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-      </div>
-
-      <!-- Appearance -->
-      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">🌙</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Giao diện</div>
-            <div class="list-item-subtitle">Light • Dark • Auto</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-      </div>
-
-      <!-- Accessibility -->
-      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">♿</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Trợ năng</div>
-            <div class="list-item-subtitle">Font lớn • Tương phản cao</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-      </div>
-
-      <!-- Help & About -->
-      <div class="card" style="padding: 0; overflow: hidden; margin-top: var(--space-4);">
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">❓</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Hướng dẫn sử dụng</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-        
-        <div class="divider" style="margin: 0;"></div>
-        
-        <div class="list-item" style="cursor: pointer;">
-          <span class="list-item-icon">ℹ️</span>
-          <div class="list-item-content">
-            <div class="list-item-title">Về ứng dụng</div>
-            <div class="list-item-subtitle">Version 1.0.0</div>
-          </div>
-          <span class="list-item-arrow">→</span>
-        </div>
-      </div>
-
-      <!-- Logout -->
-      <button class="btn btn-danger btn-block" style="margin-top: var(--space-6);">
-        Đăng xuất
-      </button>
-
-      <!-- App Info -->
-      <div style="text-align: center; margin-top: var(--space-6); color: var(--color-text-muted); font-size: var(--text-sm);">
-        <div>Kakeibo Pro v1.0.0</div>
-        <div style="margin-top: var(--space-1);">© 2026 Kakeibo Team</div>
-      </div>
-    </div>
-
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏠</span>
-        <span>Trang chủ</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">💰</span>
-        <span>Thu Chi</span>
-      </a>
-      <a href="#" class="bottom-nav-item">
-        <span class="bottom-nav-item-icon">🏘️</span>
-        <span>Thuê Nhà</span>
-      </a>
-      <a href="#" class="bottom-nav-item active">
-        <span class="bottom-nav-item-icon">⚙️</span>
-        <span>Cài đặt</span>
-      </a>
-    </nav>
-  </div>
-</body>
-</html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cài đặt hệ thống</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "primary-dark": "#0f5bbd",
+                        "background-light": "#f2f2f7", // iOS systemGroupedBackground light
+                        "background-dark": "#000000",  // iOS systemGroupedBackground dark
+                        "card-light": "#ffffff",
+                        "card-dark": "#1c1c1e",
+                        "text-primary-light": "#000000",
+                        "text-primary-dark": "#ffffff",
+                        "text-secondary-light": "#3c3c4399",
+                        "text-secondary-dark": "#ebebf599",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner mobile feel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+<div class="flex items-center justify-between px-4 h-14 w-full max-w-md mx-auto">
+<button aria-label="Quay lại" class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50" onclick="history.back()">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<h1 class="text-[17px] font-semibold text-text-primary-light dark:text-text-primary-dark truncate px-4">
+                Cài đặt hệ thống
+            </h1>
+<div class="w-8"></div> <!-- Spacer for centering title -->
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 w-full max-w-md mx-auto px-4 py-6">
+<!-- Section: Quản lý (Management) -->
+<section class="mb-8">
+<h2 class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wide ml-4 mb-2">
+                Quản lý
+            </h2>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm border border-gray-200/50 dark:border-gray-800">
+<!-- Item: Quản lý Phân loại -->
+<button class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark active:bg-gray-100 dark:active:bg-gray-800 transition-colors group border-b border-gray-100 dark:border-gray-700 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-8 rounded-lg bg-primary text-white shrink-0 shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">category</span>
+</div>
+<span class="text-[17px] font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-primary transition-colors">
+                            Quản lý Phân loại
+                        </span>
+</div>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">chevron_right</span>
+</button>
+<!-- Separator line handled by border-b above -->
+<!-- Item: Quản lý Tài khoản -->
+<button class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark active:bg-gray-100 dark:active:bg-gray-800 transition-colors group border-b border-gray-100 dark:border-gray-700 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-8 rounded-lg bg-primary text-white shrink-0 shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">account_balance_wallet</span>
+</div>
+<span class="text-[17px] font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-primary transition-colors">
+                            Quản lý Tài khoản
+                        </span>
+</div>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section: Hiển thị (Display) -->
+<section class="mb-8">
+<h2 class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wide ml-4 mb-2">
+                Hiển thị
+            </h2>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm border border-gray-200/50 dark:border-gray-800">
+<!-- Item: Chữ lớn -->
+<div class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark border-b border-gray-100 dark:border-gray-700 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-8 rounded-lg bg-blue-500 text-white shrink-0 shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">format_size</span>
+</div>
+<span class="text-[17px] font-medium text-text-primary-light dark:text-text-primary-dark">
+                            Chữ lớn
+                        </span>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary after:shadow-sm"></div>
+</label>
+</div>
+<!-- Item: Chế độ tối -->
+<div class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark border-b border-gray-100 dark:border-gray-700 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-8 rounded-lg bg-indigo-600 text-white shrink-0 shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
+</div>
+<span class="text-[17px] font-medium text-text-primary-light dark:text-text-primary-dark">
+                            Chế độ tối
+                        </span>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-[51px] h-[31px] bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[27px] after:w-[27px] after:transition-all peer-checked:bg-primary after:shadow-sm"></div>
+</label>
+</div>
+</div>
+<p class="text-[13px] text-text-secondary-light dark:text-text-secondary-dark mt-2 ml-4">
+                Điều chỉnh giao diện để dễ đọc hơn trong điều kiện thiếu sáng.
+            </p>
+</section>
+<!-- Section: Dữ liệu (Data) -->
+<section class="mb-8">
+<h2 class="text-xs font-medium text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wide ml-4 mb-2">
+                Dữ liệu
+            </h2>
+<div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-sm border border-gray-200/50 dark:border-gray-800">
+<!-- Item: Nhập từ Excel -->
+<button class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark active:bg-gray-100 dark:active:bg-gray-800 transition-colors group border-b border-gray-100 dark:border-gray-700 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-8 rounded-lg bg-green-600 text-white shrink-0 shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">upload_file</span>
+</div>
+<div class="flex flex-col items-start">
+<span class="text-[17px] font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-primary transition-colors">
+                                Nhập từ Excel
+                            </span>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">chevron_right</span>
+</button>
+<!-- Item: Xuất ra Excel -->
+<button class="w-full flex items-center justify-between p-4 bg-card-light dark:bg-card-dark active:bg-gray-100 dark:active:bg-gray-800 transition-colors group border-b border-gray-100 dark:border-gray-700 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-8 rounded-lg bg-green-600 text-white shrink-0 shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">download</span>
+</div>
+<div class="flex flex-col items-start">
+<span class="text-[17px] font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-primary transition-colors">
+                                Xuất ra Excel
+                            </span>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Footer Info -->
+<footer class="mt-auto py-6 flex flex-col items-center justify-center text-center">
+<!-- App Logo/Icon Placeholder -->
+<div class="size-10 bg-gradient-to-br from-primary to-blue-400 rounded-xl mb-3 shadow-lg flex items-center justify-center text-white" data-alt="Finance App Logo with abstract geometric shape">
+<span class="material-symbols-outlined">pie_chart</span>
+</div>
+<p class="text-[13px] font-medium text-text-secondary-light dark:text-text-secondary-dark">
+                FinManager Pro
+            </p>
+<p class="text-[11px] text-gray-400 dark:text-gray-600 mt-1">
+                Phiên bản 1.0.2 (Build 2024.10)
+            </p>
+</footer>
+</main>
+<!-- Bottom Navigation Bar Placeholder (Contextual) -->
+<!-- Not strictly required by prompt but adds mobile realism -->
+<div class="bg-card-light dark:bg-card-dark border-t border-gray-200 dark:border-gray-800 px-6 py-3 pb-8 flex justify-between items-center fixed bottom-0 w-full md:hidden z-40">
+<button class="flex flex-col items-center gap-1 text-gray-400" onclick="location.href='home.html'">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Tổng quan</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400" onclick="location.href='transactions-list.html'">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Giao dịch</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary" onclick="location.href='settings.html'">
+<span class="material-symbols-outlined fill-1">settings</span>
+<span class="text-[10px] font-medium">Cài đặt</span>
+</button>
+</div>
+<!-- Spacer for fixed bottom nav -->
+<div class="h-20 md:hidden"></div>
+</body></html>
